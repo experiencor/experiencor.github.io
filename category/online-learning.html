@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Home - Online Learning</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="../theme/css/main.css" type="text/css" />
+  <link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Flux ATOM" />
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+</head>
+<body>
+<div id="page">
+
+  <header id="header">
+    <h1><a href="../index.html">Home</a></h1>
+  </header>
+
+<nav id="menu">
+  <a href="../index.html">Home</a>
+  <a href="../categories.html">Categories</a>
+  <a href="../tags.html">Most Visited</a>
+  <a href="../archives.html">Archives</a>
+
+</nav> <!-- /#nav -->
+  <section id="content">
+ <h2 class="page_title">Articles dans la catégorie «Online Learning»</h2>
+ 
+    <article class="post">
+      <h2 class="title"><a href="../online_algorithms.html">Online Algorithms</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-29T14:30:00+01:00" pubdate="pubdate">Min 29 Januari 2017</time>
+ par Andy Huynh dans «<a href="../category/online-learning.html">Online Learning</a>».  
+Mots-clés: <a href="../tag/analysis.html">Analysis</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Genereal Framework</strong></p>
+<ul>
+<li><p>predict a vector $w_t \in S$</p>
+</li>
+<li><p>receive a convex loss function $f_t: S \rightarrow R$</p>
+</li>
+<li><p>suffer loss $f_t(\mathbf{w}_t)$</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Follow the Regularized Leader Mantra</strong></p>
+$$\mathbf{w}_{t+1} = arg \min_w \bigg\{g_{1:t} \cdot w + \alpha_{1:t}\psi(w) + r_{0:t}(w)\bigg\}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="FTRL-proximal">FTRL-proximal<a class="anchor-link" href="#FTRL-proximal">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Formulation</strong></p>
+$$w^{t+1} = \underset{w}{\mathrm{argmin}} \bigg\{g^{(1:t)} \cdot w + \lambda_1\|w\|_1 + \lambda_2\|w\|_2^2 + \frac{1}{2}\sum_{s=1}^t \sigma^{s}\|w-w^{(s)}\|_2^2\bigg\}$$$$\text{where } \sigma^{(s)}_i = \frac{1}{\alpha}\bigg(\sqrt{\sum_{j=1}^s (g_i^{(j)})^2} - \sqrt{\sum_{j=1}^{s-1} (g_i^{(j)})^2}\bigg)$$<p><strong>Algorithm</strong><br />
+        <a class="more" href="../online_algorithms.html">Lire la suite...</a>
+      </section>
+    </article>
+  </section> <!-- /#content -->
+
+<aside id="sidebar">
+
+  <div class="widget" id="categories">
+    <h2>Categories</h2>
+    <ul>
+      <li ><a href="../category/computer-vision.html">Computer Vision</a></li>
+      <li ><a href="../category/cool-ml-projects.html">Cool ML Projects</a></li>
+      <li ><a href="../category/neural-network.html">Neural Network</a></li>
+      <li class="active"><a href="../category/online-learning.html">Online Learning</a></li>
+    </ul>
+  </div>
+
+  
+
+    <div class="widget" id="social">
+      <h2>Social</h2>
+      <ul>
+        <li><a href="https://github.com/experiencor">github</a></li>
+        <li><a href="https://twitter.com/experiencor">twitter</a></li>
+       </ul>
+    </div>
+
+</aside>
+
+  <footer id="footer">
+    <p>Propulsé par <a href="http://docs.notmyidea.org/alexis/pelican/index.html">Pelican</a>.</p>
+  </footer>
+</div> <!-- /#page -->
+<script id="dsq-count-scr" src="//andyhuynh-1.disqus.com/count.js" async></script>
+</body>
+</html>

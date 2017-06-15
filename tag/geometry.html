@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Home - «Geometry»</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="../theme/css/main.css" type="text/css" />
+  <link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Flux ATOM" />
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+</head>
+<body>
+<div id="page">
+
+  <header id="header">
+    <h1><a href="../index.html">Home</a></h1>
+  </header>
+
+<nav id="menu">
+  <a href="../index.html">Home</a>
+  <a href="../categories.html">Categories</a>
+  <a href="../tags.html">Most Visited</a>
+  <a href="../archives.html">Archives</a>
+
+</nav> <!-- /#nav -->
+  <section id="content">
+ <h2 class="page_title">Articles avec le mot-clé «Geometry»</h2>
+ 
+    <article class="post">
+      <h2 class="title"><a href="../projective_geometry.html">Projective Geometry</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-14T21:10:00+01:00" pubdate="pubdate">Sab 14 Januari 2017</time>
+ par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
+Mots-clés: <a href="../tag/geometry.html">Geometry</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Homography-(2D)">Homography (2D)<a class="anchor-link" href="#Homography-(2D)">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Geometrically, given any two planes, a homography is the operation that projects the points from one plane (plane A) to other (plane B) via a projection point P, which does not lie on any of them. The projection is carried out by forming a line which connects the projection point P to any point on plane A and intersect plane B. This geometric description is not very useful for computation.</p><br />
+        <a class="more" href="../projective_geometry.html">Lire la suite...</a>
+      </section>
+    </article>
+ 
+    <article class="post">
+      <h2 class="title"><a href="../camera_geometry.html">Calibration Matrix</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-13T22:00:00+01:00" pubdate="pubdate">Jum 13 Januari 2017</time>
+ par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
+Mots-clés: <a href="../tag/linear-algebra.html">Linear Algebra</a>, <a href="../tag/geometry.html">Geometry</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Derivation-of-Calibration-Matrix">Derivation of Calibration Matrix<a class="anchor-link" href="#Derivation-of-Calibration-Matrix">¶</a></h1><p><strong>This is a summary of the Lesson on Calibration Matrix of Udacity Computer Vision Course (<a href="https://www.udacity.com/course/introduction-to-computer-vision--ud810">https://www.udacity.com/course/introduction-to-computer-vision--ud810</a>)</strong>.</p>
+<p>Geometric relationship between world coordinate system and camera coordinate system gives rise to the following equation (intrinsic relation):</p>
+$$\vec{p'} = K ~^C\vec{p}$$<p>Geometric relationship between camera coordinate system and the coordinate system of image plane gives rise to the following equation (extrinsic relation):</p><br />
+        <a class="more" href="../camera_geometry.html">Lire la suite...</a>
+      </section>
+    </article>
+ 
+    <article class="post">
+      <h2 class="title"><a href="../stereo_geometry.html">Stereo Geometry</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-13T20:00:00+01:00" pubdate="pubdate">Jum 13 Januari 2017</time>
+ par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
+Mots-clés: <a href="../tag/geometry.html">Geometry</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Geometry-of-stereo-matching">Geometry of stereo matching<a class="anchor-link" href="#Geometry-of-stereo-matching">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img align="middle" src="images/stereo.png" width="250" /></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Assuming that the image planes of the two cameras are coplanar, the following formula relates the depth $Z$ with the disparity between $x_l$ and $x_r$, which are the projections of same point $P$ on the two image planes:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$Z = f\frac{B}{x_1-x_2}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Stereo-maching-using-disparity">Stereo maching using disparity<a class="anchor-link" href="#Stereo-maching-using-disparity">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input"><br />
+        <a class="more" href="../stereo_geometry.html">Lire la suite...</a>
+      </section>
+    </article>
+  </section> <!-- /#content -->
+
+<aside id="sidebar">
+
+  <div class="widget" id="categories">
+    <h2>Categories</h2>
+    <ul>
+      <li ><a href="../category/computer-vision.html">Computer Vision</a></li>
+      <li ><a href="../category/cool-ml-projects.html">Cool ML Projects</a></li>
+      <li ><a href="../category/neural-network.html">Neural Network</a></li>
+      <li ><a href="../category/online-learning.html">Online Learning</a></li>
+    </ul>
+  </div>
+
+  
+
+    <div class="widget" id="social">
+      <h2>Social</h2>
+      <ul>
+        <li><a href="https://github.com/experiencor">github</a></li>
+        <li><a href="https://twitter.com/experiencor">twitter</a></li>
+       </ul>
+    </div>
+
+</aside>
+
+  <footer id="footer">
+    <p>Propulsé par <a href="http://docs.notmyidea.org/alexis/pelican/index.html">Pelican</a>.</p>
+  </footer>
+</div> <!-- /#page -->
+<script id="dsq-count-scr" src="//andyhuynh-1.disqus.com/count.js" async></script>
+</body>
+</html>

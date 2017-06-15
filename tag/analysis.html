@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Home - «Analysis»</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="../theme/css/main.css" type="text/css" />
+  <link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Flux ATOM" />
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+</head>
+<body>
+<div id="page">
+
+  <header id="header">
+    <h1><a href="../index.html">Home</a></h1>
+  </header>
+
+<nav id="menu">
+  <a href="../index.html">Home</a>
+  <a href="../categories.html">Categories</a>
+  <a href="../tags.html">Most Visited</a>
+  <a href="../archives.html">Archives</a>
+
+</nav> <!-- /#nav -->
+  <section id="content">
+ <h2 class="page_title">Articles avec le mot-clé «Analysis»</h2>
+ 
+    <article class="post">
+      <h2 class="title"><a href="../online_algorithms.html">Online Algorithms</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-29T14:30:00+01:00" pubdate="pubdate">Min 29 Januari 2017</time>
+ par Andy Huynh dans «<a href="../category/online-learning.html">Online Learning</a>».  
+Mots-clés: <a href="../tag/analysis.html">Analysis</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Genereal Framework</strong></p>
+<ul>
+<li><p>predict a vector $w_t \in S$</p>
+</li>
+<li><p>receive a convex loss function $f_t: S \rightarrow R$</p>
+</li>
+<li><p>suffer loss $f_t(\mathbf{w}_t)$</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Follow the Regularized Leader Mantra</strong></p>
+$$\mathbf{w}_{t+1} = arg \min_w \bigg\{g_{1:t} \cdot w + \alpha_{1:t}\psi(w) + r_{0:t}(w)\bigg\}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="FTRL-proximal">FTRL-proximal<a class="anchor-link" href="#FTRL-proximal">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Formulation</strong></p>
+$$w^{t+1} = \underset{w}{\mathrm{argmin}} \bigg\{g^{(1:t)} \cdot w + \lambda_1\|w\|_1 + \lambda_2\|w\|_2^2 + \frac{1}{2}\sum_{s=1}^t \sigma^{s}\|w-w^{(s)}\|_2^2\bigg\}$$$$\text{where } \sigma^{(s)}_i = \frac{1}{\alpha}\bigg(\sqrt{\sum_{j=1}^s (g_i^{(j)})^2} - \sqrt{\sum_{j=1}^{s-1} (g_i^{(j)})^2}\bigg)$$<p><strong>Algorithm</strong><br />
+        <a class="more" href="../online_algorithms.html">Lire la suite...</a>
+      </section>
+    </article>
+ 
+    <article class="post">
+      <h2 class="title"><a href="../learning_rate.html">Problem with Sigmoid and Sum of Squares Loss</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-17T22:30:00+01:00" pubdate="pubdate">Sel 17 Januari 2017</time>
+ par Andy Huynh dans «<a href="../category/neural-network.html">Neural Network</a>».  
+Mots-clés: <a href="../tag/analysis.html">Analysis</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Sigmoid-and-Quadratic-Cost">Sigmoid and Quadratic Cost<a class="anchor-link" href="#Sigmoid-and-Quadratic-Cost">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$a^L = \frac{1}{1 + e^{-z^L}}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$C = \sum_j (a^L_j-y_j)^2$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Backpropagating the loss to the biases and weights of the output layer:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$\frac{\partial C}{\partial b_j^L} = \frac{\partial C}{\partial a_j^L}\frac{\partial a_j^L}{\partial b_j^L} = (a_j^L-y_j)\sigma'(z_j^L)$$$$\frac{\partial C}{\partial w_{jk}^L} = \frac{\partial C}{\partial a_j^L}\frac{\partial a_j^L}{\partial w_{jk}^L} = a_k^{L-1}(a_j^L-y_j)\sigma'(z_j^L)$$<p>As $\sigma'(z_j^L) = \sigma(z_j^L) (1- \sigma(z_j^L))$, $\frac{\partial C}{\partial b_j^L}$ and $\frac{\partial C}{\partial w_{jk}^L}$ become small when $\sigma(z_j^L)\approx 0$ or $\sigma(z_j^L) \approx 1$. This behavior is bad when $\sigma(z_j^L)$ is near to the wrong extreme.</p><br />
+        <a class="more" href="../learning_rate.html">Lire la suite...</a>
+      </section>
+    </article>
+ 
+    <article class="post">
+      <h2 class="title"><a href="../optical_flow.html">Optical Flow</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-14T22:14:00+01:00" pubdate="pubdate">Sab 14 Januari 2017</time>
+ par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
+Mots-clés: <a href="../tag/linear-algebra.html">Linear Algebra</a>, <a href="../tag/analysis.html">Analysis</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>1st assumption</strong> of Lucas Kanade is the brightness assumption, which assumes that the displaced pixel remains at the same brightness level. With u and v are the displacements of the pixel at $(x,y)$, the 1st assumption gives rise to</p>
+$$0 = I(x+u,y+v,t+1) - I(x,y,t) (1)$$<p>To estimate the amount of displacement, we can analyze the behavior of I(t) and I(t+1) at the vicinity of (x,y). The simplest way to do this is to exhautively search for the values of u and v that satisfy equation (1). This way is computationally expensive. A better method is to use the linear Taylor approximation of I(t+1) at (x,y). The <strong>2nd assumption</strong><br />
+        <a class="more" href="../optical_flow.html">Lire la suite...</a>
+      </section>
+    </article>
+ 
+    <article class="post">
+      <h2 class="title"><a href="../corner_detection.html">Corner Detection</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-14T22:00:00+01:00" pubdate="pubdate">Sab 14 Januari 2017</time>
+ par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
+Mots-clés: <a href="../tag/linear-algebra.html">Linear Algebra</a>, <a href="../tag/analysis.html">Analysis</a>, <a href="../tag/probability.html">Probability</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Characterization-of-Harris-Corner">Characterization of Harris Corner<a class="anchor-link" href="#Characterization-of-Harris-Corner">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A good way to determine whether there is an edge at the vicinity of $(x,y)$ is to measure how much the intensity of the image changes around $(x,y)$. When we shift the image in horizontal direction and/or vertical direction, we expect the change in the intensity to be large at the location of an corner and vice versa. This motivates the definition of $E(x,y)$, which is a measure of how the intensity of an image patch around $(x,y)$ changes when we shift it on both directions:</p><br />
+        <a class="more" href="../corner_detection.html">Lire la suite...</a>
+      </section>
+    </article>
+  </section> <!-- /#content -->
+
+<aside id="sidebar">
+
+  <div class="widget" id="categories">
+    <h2>Categories</h2>
+    <ul>
+      <li ><a href="../category/computer-vision.html">Computer Vision</a></li>
+      <li ><a href="../category/cool-ml-projects.html">Cool ML Projects</a></li>
+      <li ><a href="../category/neural-network.html">Neural Network</a></li>
+      <li ><a href="../category/online-learning.html">Online Learning</a></li>
+    </ul>
+  </div>
+
+  
+
+    <div class="widget" id="social">
+      <h2>Social</h2>
+      <ul>
+        <li><a href="https://github.com/experiencor">github</a></li>
+        <li><a href="https://twitter.com/experiencor">twitter</a></li>
+       </ul>
+    </div>
+
+</aside>
+
+  <footer id="footer">
+    <p>Propulsé par <a href="http://docs.notmyidea.org/alexis/pelican/index.html">Pelican</a>.</p>
+  </footer>
+</div> <!-- /#page -->
+<script id="dsq-count-scr" src="//andyhuynh-1.disqus.com/count.js" async></script>
+</body>
+</html>

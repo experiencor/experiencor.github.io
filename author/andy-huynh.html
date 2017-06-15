@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Home - Articles by Andy Huynh</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="../theme/css/main.css" type="text/css" />
+  <link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Flux ATOM" />
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+</head>
+<body>
+<div id="page">
+
+  <header id="header">
+    <h1><a href="../index.html">Home</a></h1>
+  </header>
+
+<nav id="menu">
+  <a href="../index.html">Home</a>
+  <a href="../categories.html">Categories</a>
+  <a href="../tags.html">Most Visited</a>
+  <a href="../archives.html">Archives</a>
+
+</nav> <!-- /#nav -->
+  <section id="content">
+  
+    <article class="post">
+      <h2 class="title"><a href="../self_driving_toy_car.html">Self Driving Toy Car</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-06-13T20:00:00+02:00" pubdate="pubdate">Sel 13 Juni 2017</time>
+ par Andy Huynh dans «<a href="../category/cool-ml-projects.html">Cool ML Projects</a>».  
+Mots-clés: <a href="../tag/machine-learning.html">Machine Learning</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h2><p>To make a lane follower based on a standard RC car like this <a href="https://www.youtube.com/watch?v=-v6q2dNZTU8">https://www.youtube.com/watch?v=-v6q2dNZTU8</a>.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Design">Design<a class="anchor-link" href="#Design">¶</a></h2><p>The basic idea is to use a Raspberry Pi to control the RC car. The Raspberry Pi makes steering action based on camera image.</p>
+<p><img src="images/hardware.jpg" width="500" /></p>
+<p><strong> Hardware </strong></p>
+<p>For the uninitiated, the receiver of a standard RC car receives throttle and steering signals from the transmitter. The signals are converted to PWM pulses by the receiver to directly control the speed of the motor and the steering angle of the servo. The following figure pictures the wiring of a standard RC car:</p><br />
+        <a class="more" href="../self_driving_toy_car.html">Lire la suite...</a>
+      </section>
+    </article>
+  
+    <article class="post">
+      <h2 class="title"><a href="../ftrl_adp.html">Follow the Regularized Leader with Adaptive Decaying Proximal</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-05-15T22:10:00+02:00" pubdate="pubdate">Sen 15 Mei 2017</time>
+ par Andy Huynh dans «<a href="../category/neural-network.html">Neural Network</a>».  
+Mots-clés: <a href="../tag/linear-algebra.html">Linear Algebra</a>, <a href="../tag/analaysis.html">Analaysis</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Derivation-of-FTRL-ADP">Derivation of FTRL-ADP<a class="anchor-link" href="#Derivation-of-FTRL-ADP">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Problem">Problem<a class="anchor-link" href="#Problem">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+\begin{equation} \label{eq:ftrl_dp}
+\begin{split}
+w_{t+1} = \underset{w}{\operatorname{argmax}} &\bigg\{g^\top _{1:t}w + \lambda_1\|w\|_1 + \frac{1}{2}\lambda_2\|w\|_2^2 + \frac{1}{2}\lambda_p\sum_{s=1}^{t}\sigma_{t,s} \|w-w_s\|^2_2\bigg\} \\ &\text{ in which } g^\top _{1:t} = \sum_{i=1}^{t}g^\top _t \text{ and } \sigma_{t,s} = \gamma^{t-s}
+\end{split}
+\end{equation}
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is a variant of the FTRL-proximal proposed by McMahan et al. in Ad click prediction: a view from the trenches.</p><br />
+        <a class="more" href="../ftrl_adp.html">Lire la suite...</a>
+      </section>
+    </article>
+  
+    <article class="post">
+      <h2 class="title"><a href="../sdc_3d.html">3D Vehicle Detection</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-05-01T22:10:00+02:00" pubdate="pubdate">Sen 01 Mei 2017</time>
+ par Andy Huynh dans «<a href="../category/cool-ml-projects.html">Cool ML Projects</a>».  
+        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Background">Background<a class="anchor-link" href="#Background">¶</a></h1><p>Perception unit is a key component of self driving car. It relies on various sensors such as LIDAR, CAMERA and RADAR to identify and locate surrounding objects.</p>
+<p>The most important objects to be detected are other vehicles.</p>
+<p>[This is a work in progress for UDACITY-DIDI challenge.]</p>
+<p>[github: <a href="https://github.com/experiencor/didi-starter/tree/master/simple_solution">https://github.com/experiencor/didi-starter/tree/master/simple_solution</a>]</p>
+<p><strong>Problem</strong></p>
+<p>Given the LIDAR and CAMERA data, determine the location and the orientation in 3D of surrounding vehicles.</p><br />
+        <a class="more" href="../sdc_3d.html">Lire la suite...</a>
+      </section>
+    </article>
+  
+    <article class="post">
+      <h2 class="title"><a href="../mal_url.html">Predicting Malicious URLs</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-04-20T22:22:00+02:00" pubdate="pubdate">Kam 20 April 2017</time>
+ par Andy Huynh dans «<a href="../category/cool-ml-projects.html">Cool ML Projects</a>».  
+        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Background">Background<a class="anchor-link" href="#Background">¶</a></h1><p>Traditional firewall relies on whitelist and blacklist to decide whether to allow or block a domain name.  This scheme is problematic as the lists need to be updated manually and regularly. Outdated lists would limit the accessibility of the network and/or fail to detect novel malicious domain names.</p>
+<p>So we aim to train a machine learning model to predict whether a domain name is malicious. The model can be fully developped into a smart firewall solution to police network traffic without relying on static lists.</p><br />
+        <a class="more" href="../mal_url.html">Lire la suite...</a>
+      </section>
+    </article>
+  
+    <article class="post">
+      <h2 class="title"><a href="../yolo_keras.html">Basic Yolo with Keras</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-03-22T22:00:00+01:00" pubdate="pubdate">Rab 22 Maret 2017</time>
+ par Andy Huynh dans «<a href="../category/cool-ml-projects.html">Cool ML Projects</a>».  
+        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">¶</a></h1><p>This is a proof of concept implementation of YOLOv2 using Keras.</p>
+<p><a href="https://github.com/experiencor/basic-yolo-keras">https://github.com/experiencor/basic-yolo-keras</a></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Outline of Steps</strong></p>
+<pre><code>+ Initialization of parameters
+    + Download VOC data from http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar
+    + Download pre-trained weights from http://pjreddie.com/media/files/tiny-yolo-voc.weights
+    + Specify the directory of annotations by setting variable *ann_di*
+    + Specify the directory of images by setting variable *img_dir*
+    + Specity the path of pre-trained weights by setting variable *wt_path*
++ Construct equivalent network in Keras
+    + Network arch from https://github.com/pjreddie/darknet/blob/master/cfg/tiny-yolo-voc.cfg
++ Load the pretrained weights
++ Preprocess VOC data
++ Perform training (for POC, the weights of the last layers are randomized before training)
++ Perform detection on an image with newly trained weights</code><br />
+        <a class="more" href="../yolo_keras.html">Lire la suite...</a>
+      </section>
+    </article>
+  
+    <article class="post">
+      <h2 class="title"><a href="../segmentation.html">Image Segmentation</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-02-19T08:00:00+01:00" pubdate="pubdate">Min 19 Pebruari 2017</time>
+ par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
+        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Experiments with some traditional segmentation methods. Outline:</p>
+<ul>
+<li>DBSCAN</li>
+<li>K-mean</li>
+<li>Meanshift</li>
+<li>Graphcut</li>
+<li>Watershed</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Segmentation-by-DBSCAN">Segmentation by DBSCAN<a class="anchor-link" href="#Segmentation-by-DBSCAN">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input"><br />
+        <a class="more" href="../segmentation.html">Lire la suite...</a>
+      </section>
+    </article>
+  
+    <article class="post">
+      <h2 class="title"><a href="../online_algorithms.html">Online Algorithms</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-29T14:30:00+01:00" pubdate="pubdate">Min 29 Januari 2017</time>
+ par Andy Huynh dans «<a href="../category/online-learning.html">Online Learning</a>».  
+Mots-clés: <a href="../tag/analysis.html">Analysis</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Genereal Framework</strong></p>
+<ul>
+<li><p>predict a vector $w_t \in S$</p>
+</li>
+<li><p>receive a convex loss function $f_t: S \rightarrow R$</p>
+</li>
+<li><p>suffer loss $f_t(\mathbf{w}_t)$</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Follow the Regularized Leader Mantra</strong></p>
+$$\mathbf{w}_{t+1} = arg \min_w \bigg\{g_{1:t} \cdot w + \alpha_{1:t}\psi(w) + r_{0:t}(w)\bigg\}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="FTRL-proximal">FTRL-proximal<a class="anchor-link" href="#FTRL-proximal">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Formulation</strong></p>
+$$w^{t+1} = \underset{w}{\mathrm{argmin}} \bigg\{g^{(1:t)} \cdot w + \lambda_1\|w\|_1 + \lambda_2\|w\|_2^2 + \frac{1}{2}\sum_{s=1}^t \sigma^{s}\|w-w^{(s)}\|_2^2\bigg\}$$$$\text{where } \sigma^{(s)}_i = \frac{1}{\alpha}\bigg(\sqrt{\sum_{j=1}^s (g_i^{(j)})^2} - \sqrt{\sum_{j=1}^{s-1} (g_i^{(j)})^2}\bigg)$$<p><strong>Algorithm</strong><br />
+        <a class="more" href="../online_algorithms.html">Lire la suite...</a>
+      </section>
+    </article>
+  
+    <article class="post">
+      <h2 class="title"><a href="../weight_init.html">Weight Initialization</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-26T10:00:00+01:00" pubdate="pubdate">Kam 26 Januari 2017</time>
+ par Andy Huynh dans «<a href="../category/neural-network.html">Neural Network</a>».  
+        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Why-setting-all-weights-and-biases-to-0-is-a-bad-idea?">Why setting all weights and biases to 0 is a bad idea?<a class="anchor-link" href="#Why-setting-all-weights-and-biases-to-0-is-a-bad-idea?">¶</a></h1><p>As $a_j^l = \sigma\big(\sum _k w_{jk}^l a_k^{l-1} +b_j^l\big)$, all nodes will produce the same activation. Although the weights and the biases would later diverge if the scalar components of the input vector are different, this is still not a good idea for the general input.</p><br />
+        <a class="more" href="../weight_init.html">Lire la suite...</a>
+      </section>
+    </article>
+  
+    <article class="post">
+      <h2 class="title"><a href="../learning_rate.html">Problem with Sigmoid and Sum of Squares Loss</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-17T22:30:00+01:00" pubdate="pubdate">Sel 17 Januari 2017</time>
+ par Andy Huynh dans «<a href="../category/neural-network.html">Neural Network</a>».  
+Mots-clés: <a href="../tag/analysis.html">Analysis</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Sigmoid-and-Quadratic-Cost">Sigmoid and Quadratic Cost<a class="anchor-link" href="#Sigmoid-and-Quadratic-Cost">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$a^L = \frac{1}{1 + e^{-z^L}}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$C = \sum_j (a^L_j-y_j)^2$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Backpropagating the loss to the biases and weights of the output layer:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$\frac{\partial C}{\partial b_j^L} = \frac{\partial C}{\partial a_j^L}\frac{\partial a_j^L}{\partial b_j^L} = (a_j^L-y_j)\sigma'(z_j^L)$$$$\frac{\partial C}{\partial w_{jk}^L} = \frac{\partial C}{\partial a_j^L}\frac{\partial a_j^L}{\partial w_{jk}^L} = a_k^{L-1}(a_j^L-y_j)\sigma'(z_j^L)$$<p>As $\sigma'(z_j^L) = \sigma(z_j^L) (1- \sigma(z_j^L))$, $\frac{\partial C}{\partial b_j^L}$ and $\frac{\partial C}{\partial w_{jk}^L}$ become small when $\sigma(z_j^L)\approx 0$ or $\sigma(z_j^L) \approx 1$. This behavior is bad when $\sigma(z_j^L)$ is near to the wrong extreme.</p><br />
+        <a class="more" href="../learning_rate.html">Lire la suite...</a>
+      </section>
+    </article>
+  
+    <article class="post">
+      <h2 class="title"><a href="../object_tracking.html">Object Tracking</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-14T22:30:00+01:00" pubdate="pubdate">Sab 14 Januari 2017</time>
+ par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
+Mots-clés: <a href="../tag/probability.html">Probability</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Definition of Posterior Belief:</p>
+$$Bel(x_t) \equiv P(x_t | z_{1:t}, u_{1:t})$$<p>1st Assumption: Markovian Property</p>
+$$P(x_t | x_{t-1}, z_{1:t-1}, u_{1:t}) = P(x_t | x_{t-1}, u_t)$$<p>2nd Assumption: Sensor Independent</p>
+$$P(z_t | x_t, z_{1:t-1}, u_{1:t}) = P(z_t | x_t)$$<p>Graphical Model Illustration</p>
+<p><img src="images/model.png" width="350" /></p>
+<p>Recursive relationship between $Bel(x_t)$ and $Bel(x_{t-1})$</p>
+\begin{equation}
+\begin{split}
+Bel(x_t) & = P(x_t | z_{1:t}, u_{1:t}) \\
+  & = \eta P(z_t | x_t, z_{1:t-1}, u_{1:t})P(x_t | z_{1:t-1}, u_{1:t}) \\
+  & = \eta P(z_t | x_t)P(x_t | z_{1:t-1}, u_{1:t}) \\
+  & = \eta P(z_t | x_t)\int P(x_t | x_{t-1}, z_{1:t-1}, u_{1:t})P(x_{t-1} | z_{1:t-1}, u_{1:t})dx_{t-1} \\
+  & = \eta P(z_t | x_t)\int P(x_t | x_{t-1}, u_t)P(x_{t-1} | z_{1:t-1}, u_{1:t-1})dx_{t-1} \\
+  & = \eta P(z_t | x_t)\int P(x_t | x_{t-1}, u_t)Bel(x_{t-1})dx_{t-1}
+\end{split}
+\end{equation}
+</div><br />
+        <a class="more" href="../object_tracking.html">Lire la suite...</a>
+      </section>
+    </article>
+
+      <nav class="pagination">
+      Page <b>1</b> sur <b>2</b>
+        <a href="../author/andy-huynh2.html">&#62;&#62;</a>
+      </nav>
+
+  </section> <!-- /#content -->
+
+<aside id="sidebar">
+
+  <div class="widget" id="categories">
+    <h2>Categories</h2>
+    <ul>
+      <li ><a href="../category/computer-vision.html">Computer Vision</a></li>
+      <li ><a href="../category/cool-ml-projects.html">Cool ML Projects</a></li>
+      <li ><a href="../category/neural-network.html">Neural Network</a></li>
+      <li ><a href="../category/online-learning.html">Online Learning</a></li>
+    </ul>
+  </div>
+
+  
+
+    <div class="widget" id="social">
+      <h2>Social</h2>
+      <ul>
+        <li><a href="https://github.com/experiencor">github</a></li>
+        <li><a href="https://twitter.com/experiencor">twitter</a></li>
+       </ul>
+    </div>
+
+</aside>
+
+  <footer id="footer">
+    <p>Propulsé par <a href="http://docs.notmyidea.org/alexis/pelican/index.html">Pelican</a>.</p>
+  </footer>
+</div> <!-- /#page -->
+<script id="dsq-count-scr" src="//andyhuynh-1.disqus.com/count.js" async></script>
+</body>
+</html>
