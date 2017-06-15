@@ -37,57 +37,6 @@
  <h2 class="page_title">Articles avec le mot-clé «Analysis»</h2>
  
     <article class="post">
-      <h2 class="title"><a href="../online_algorithms.html">Online Algorithms</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-01-29T14:30:00+01:00" pubdate="pubdate">Min 29 Januari 2017</time>
- par Andy Huynh dans «<a href="../category/online-learning.html">Online Learning</a>».  
-Mots-clés: <a href="../tag/analysis.html">Analysis</a></p>        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Genereal Framework</strong></p>
-<ul>
-<li><p>predict a vector $w_t \in S$</p>
-</li>
-<li><p>receive a convex loss function $f_t: S \rightarrow R$</p>
-</li>
-<li><p>suffer loss $f_t(\mathbf{w}_t)$</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Follow the Regularized Leader Mantra</strong></p>
-$$\mathbf{w}_{t+1} = arg \min_w \bigg\{g_{1:t} \cdot w + \alpha_{1:t}\psi(w) + r_{0:t}(w)\bigg\}$$
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="FTRL-proximal">FTRL-proximal<a class="anchor-link" href="#FTRL-proximal">¶</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Formulation</strong></p>
-$$w^{t+1} = \underset{w}{\mathrm{argmin}} \bigg\{g^{(1:t)} \cdot w + \lambda_1\|w\|_1 + \lambda_2\|w\|_2^2 + \frac{1}{2}\sum_{s=1}^t \sigma^{s}\|w-w^{(s)}\|_2^2\bigg\}$$$$\text{where } \sigma^{(s)}_i = \frac{1}{\alpha}\bigg(\sqrt{\sum_{j=1}^s (g_i^{(j)})^2} - \sqrt{\sum_{j=1}^{s-1} (g_i^{(j)})^2}\bigg)$$<p><strong>Algorithm</strong><br />
-        <a class="more" href="../online_algorithms.html">Lire la suite...</a>
-      </section>
-    </article>
- 
-    <article class="post">
       <h2 class="title"><a href="../learning_rate.html">Problem with Sigmoid and Sum of Squares Loss</a></h2>
         <details class="meta">
           Publié le <time datetime="2017-01-17T22:30:00+01:00" pubdate="pubdate">Sel 17 Januari 2017</time>
@@ -188,7 +137,6 @@ Mots-clés: <a href="../tag/linear-algebra.html">Linear Algebra</a>, <a href="..
       <li ><a href="../category/computer-vision.html">Computer Vision</a></li>
       <li ><a href="../category/cool-ml-projects.html">Cool ML Projects</a></li>
       <li ><a href="../category/neural-network.html">Neural Network</a></li>
-      <li ><a href="../category/online-learning.html">Online Learning</a></li>
     </ul>
   </div>
 
