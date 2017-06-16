@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Home - Practical ML</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="../theme/css/main.css" type="text/css" />
+  <link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Flux ATOM" />
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+</head>
+<body>
+<div id="page">
+
+  <header id="header">
+    <h1><a href="../index.html">Home</a></h1>
+  </header>
+
+<nav id="menu">
+  <a href="../index.html">Home</a>
+  <a href="../categories.html">Categories</a>
+  <a href="../tags.html">Most Visited</a>
+  <a href="../archives.html">Archives</a>
+
+</nav> <!-- /#nav -->
+  <section id="content">
+ <h2 class="page_title">Articles dans la catégorie «Practical ML»</h2>
+ 
+    <article class="post">
+      <h2 class="title"><a href="../self_driving_toy_car.html">Self Driving Toy Car</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-06-13T20:00:00+02:00" pubdate="pubdate">Sel 13 Juni 2017</time>
+ par Andy Huynh dans «<a href="../category/practical-ml.html">Practical ML</a>».  
+Mots-clés: <a href="../tag/machine-learning.html">Machine Learning</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h2><p>To make a lane follower based on a standard RC car like this <a href="https://www.youtube.com/watch?v=-v6q2dNZTU8">https://www.youtube.com/watch?v=-v6q2dNZTU8</a>.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Design">Design<a class="anchor-link" href="#Design">¶</a></h2><p>The basic idea is to use a Raspberry Pi to control the RC car. The Raspberry Pi makes steering action based on camera image.</p>
+<p><img src="images/hardware.jpg" width="500" /></p>
+<p><strong> Hardware </strong></p>
+<p>For the uninitiated, the receiver of a standard RC car receives throttle and steering signals from the transmitter. The signals are converted to PWM pulses by the receiver to directly control the speed of the motor and the steering angle of the servo. The following figure pictures the wiring of a standard RC car:</p><br />
+        <a class="more" href="../self_driving_toy_car.html">Lire la suite...</a>
+      </section>
+    </article>
+ 
+    <article class="post">
+      <h2 class="title"><a href="../sdc_3d.html">3D Vehicle Detection</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-05-01T22:10:00+02:00" pubdate="pubdate">Sen 01 Mei 2017</time>
+ par Andy Huynh dans «<a href="../category/practical-ml.html">Practical ML</a>».  
+        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Background">Background<a class="anchor-link" href="#Background">¶</a></h1><p>Perception unit is a key component of self driving car. It relies on various sensors such as LIDAR, CAMERA and RADAR to identify and locate surrounding objects.</p>
+<p>The most important objects to be detected are other vehicles.</p>
+<p>[This is a work in progress for UDACITY-DIDI challenge.]</p>
+<p>[github: <a href="https://github.com/experiencor/didi-starter/tree/master/simple_solution">https://github.com/experiencor/didi-starter/tree/master/simple_solution</a>]</p>
+<p><strong>Problem</strong></p>
+<p>Given the LIDAR and CAMERA data, determine the location and the orientation in 3D of surrounding vehicles.</p><br />
+        <a class="more" href="../sdc_3d.html">Lire la suite...</a>
+      </section>
+    </article>
+ 
+    <article class="post">
+      <h2 class="title"><a href="../mal_url.html">Predicting Malicious URLs</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-04-20T22:22:00+02:00" pubdate="pubdate">Kam 20 April 2017</time>
+ par Andy Huynh dans «<a href="../category/practical-ml.html">Practical ML</a>».  
+        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Background">Background<a class="anchor-link" href="#Background">¶</a></h1><p>Traditional firewall relies on whitelist and blacklist to decide whether to allow or block a domain name.  This scheme is problematic as the lists need to be updated manually and regularly. Outdated lists would limit the accessibility of the network and/or fail to detect novel malicious domain names.</p>
+<p>So we aim to train a machine learning model to predict whether a domain name is malicious. The model can be fully developped into a smart firewall solution to police network traffic without relying on static lists.</p><br />
+        <a class="more" href="../mal_url.html">Lire la suite...</a>
+      </section>
+    </article>
+ 
+    <article class="post">
+      <h2 class="title"><a href="../yolo_keras.html">Basic Yolo with Keras</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-03-22T22:00:00+01:00" pubdate="pubdate">Rab 22 Maret 2017</time>
+ par Andy Huynh dans «<a href="../category/practical-ml.html">Practical ML</a>».  
+        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">¶</a></h1><p>This is a proof of concept implementation of YOLOv2 using Keras.</p>
+<p><a href="https://github.com/experiencor/basic-yolo-keras">https://github.com/experiencor/basic-yolo-keras</a></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Outline of Steps</strong></p>
+<pre><code>+ Initialization of parameters
+    + Download VOC data from http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar
+    + Download pre-trained weights from http://pjreddie.com/media/files/tiny-yolo-voc.weights
+    + Specify the directory of annotations by setting variable *ann_di*
+    + Specify the directory of images by setting variable *img_dir*
+    + Specity the path of pre-trained weights by setting variable *wt_path*
++ Construct equivalent network in Keras
+    + Network arch from https://github.com/pjreddie/darknet/blob/master/cfg/tiny-yolo-voc.cfg
++ Load the pretrained weights
++ Preprocess VOC data
++ Perform training (for POC, the weights of the last layers are randomized before training)
++ Perform detection on an image with newly trained weights</code><br />
+        <a class="more" href="../yolo_keras.html">Lire la suite...</a>
+      </section>
+    </article>
+  </section> <!-- /#content -->
+
+<aside id="sidebar">
+
+  <div class="widget" id="categories">
+    <h2>Categories</h2>
+    <ul>
+      <li ><a href="../category/computer-vision.html">Computer Vision</a></li>
+      <li class="active"><a href="../category/practical-ml.html">Practical ML</a></li>
+      <li ><a href="../category/theoretical-ml.html">Theoretical ML</a></li>
+    </ul>
+  </div>
+
+  
+
+    <div class="widget" id="social">
+      <h2>Social</h2>
+      <ul>
+        <li><a href="https://github.com/experiencor">github</a></li>
+        <li><a href="https://twitter.com/experiencor">twitter</a></li>
+       </ul>
+    </div>
+
+</aside>
+
+  <footer id="footer">
+    <p>Propulsé par <a href="http://docs.notmyidea.org/alexis/pelican/index.html">Pelican</a>.</p>
+  </footer>
+</div> <!-- /#page -->
+<script id="dsq-count-scr" src="//andyhuynh-1.disqus.com/count.js" async></script>
+</body>
+</html>

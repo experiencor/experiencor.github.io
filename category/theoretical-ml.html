@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Home - Theoretical ML</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="../theme/css/main.css" type="text/css" />
+  <link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Flux ATOM" />
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+</head>
+<body>
+<div id="page">
+
+  <header id="header">
+    <h1><a href="../index.html">Home</a></h1>
+  </header>
+
+<nav id="menu">
+  <a href="../index.html">Home</a>
+  <a href="../categories.html">Categories</a>
+  <a href="../tags.html">Most Visited</a>
+  <a href="../archives.html">Archives</a>
+
+</nav> <!-- /#nav -->
+  <section id="content">
+ <h2 class="page_title">Articles dans la catégorie «Theoretical ML»</h2>
+ 
+    <article class="post">
+      <h2 class="title"><a href="../ftrl_adp.html">Follow the Regularized Leader with Adaptive Decaying Proximal</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-05-15T22:10:00+02:00" pubdate="pubdate">Sen 15 Mei 2017</time>
+ par Andy Huynh dans «<a href="../category/theoretical-ml.html">Theoretical ML</a>».  
+Mots-clés: <a href="../tag/linear-algebra.html">Linear Algebra</a>, <a href="../tag/analaysis.html">Analaysis</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Derivation-of-FTRL-ADP">Derivation of FTRL-ADP<a class="anchor-link" href="#Derivation-of-FTRL-ADP">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Problem">Problem<a class="anchor-link" href="#Problem">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+\begin{equation} \label{eq:ftrl_dp}
+\begin{split}
+w_{t+1} = \underset{w}{\operatorname{argmax}} &\bigg\{g^\top _{1:t}w + \lambda_1\|w\|_1 + \frac{1}{2}\lambda_2\|w\|_2^2 + \frac{1}{2}\lambda_p\sum_{s=1}^{t}\sigma_{t,s} \|w-w_s\|^2_2\bigg\} \\ &\text{ in which } g^\top _{1:t} = \sum_{i=1}^{t}g^\top _t \text{ and } \sigma_{t,s} = \gamma^{t-s}
+\end{split}
+\end{equation}
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is a variant of the FTRL-proximal proposed by McMahan et al. in Ad click prediction: a view from the trenches.</p><br />
+        <a class="more" href="../ftrl_adp.html">Lire la suite...</a>
+      </section>
+    </article>
+ 
+    <article class="post">
+      <h2 class="title"><a href="../weight_init.html">Weight Initialization</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-26T10:00:00+01:00" pubdate="pubdate">Kam 26 Januari 2017</time>
+ par Andy Huynh dans «<a href="../category/theoretical-ml.html">Theoretical ML</a>».  
+        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Why-setting-all-weights-and-biases-to-0-is-a-bad-idea?">Why setting all weights and biases to 0 is a bad idea?<a class="anchor-link" href="#Why-setting-all-weights-and-biases-to-0-is-a-bad-idea?">¶</a></h1><p>As $a_j^l = \sigma\big(\sum _k w_{jk}^l a_k^{l-1} +b_j^l\big)$, all nodes will produce the same activation. Although the weights and the biases would later diverge if the scalar components of the input vector are different, this is still not a good idea for the general input.</p><br />
+        <a class="more" href="../weight_init.html">Lire la suite...</a>
+      </section>
+    </article>
+ 
+    <article class="post">
+      <h2 class="title"><a href="../learning_rate.html">Problem with Sigmoid and Sum of Squares Loss</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-17T22:30:00+01:00" pubdate="pubdate">Sel 17 Januari 2017</time>
+ par Andy Huynh dans «<a href="../category/theoretical-ml.html">Theoretical ML</a>».  
+Mots-clés: <a href="../tag/analysis.html">Analysis</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Sigmoid-and-Quadratic-Cost">Sigmoid and Quadratic Cost<a class="anchor-link" href="#Sigmoid-and-Quadratic-Cost">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$a^L = \frac{1}{1 + e^{-z^L}}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$C = \sum_j (a^L_j-y_j)^2$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Backpropagating the loss to the biases and weights of the output layer:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$\frac{\partial C}{\partial b_j^L} = \frac{\partial C}{\partial a_j^L}\frac{\partial a_j^L}{\partial b_j^L} = (a_j^L-y_j)\sigma'(z_j^L)$$$$\frac{\partial C}{\partial w_{jk}^L} = \frac{\partial C}{\partial a_j^L}\frac{\partial a_j^L}{\partial w_{jk}^L} = a_k^{L-1}(a_j^L-y_j)\sigma'(z_j^L)$$<p>As $\sigma'(z_j^L) = \sigma(z_j^L) (1- \sigma(z_j^L))$, $\frac{\partial C}{\partial b_j^L}$ and $\frac{\partial C}{\partial w_{jk}^L}$ become small when $\sigma(z_j^L)\approx 0$ or $\sigma(z_j^L) \approx 1$. This behavior is bad when $\sigma(z_j^L)$ is near to the wrong extreme.</p><br />
+        <a class="more" href="../learning_rate.html">Lire la suite...</a>
+      </section>
+    </article>
+ 
+    <article class="post">
+      <h2 class="title"><a href="../back_propagation.html">How Backpropagation Work?</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-14T22:10:00+01:00" pubdate="pubdate">Sab 14 Januari 2017</time>
+ par Andy Huynh dans «<a href="../category/theoretical-ml.html">Theoretical ML</a>».  
+Mots-clés: <a href="../tag/linear-algebra.html">Linear Algebra</a>, <a href="../tag/analaysis.html">Analaysis</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">¶</a></h1><h2 id="Forward-Operation-and-4-Backpropagation-Formulas">Forward Operation and 4 Backpropagation Formulas<a class="anchor-link" href="#Forward-Operation-and-4-Backpropagation-Formulas">¶</a></h2><p><img src="images/network.png" width="450" /></p>
+<p>By definition, the <strong>forward operation</strong> can be fully defined by 3 formulas.</p>
+$$z^l = w^l a^{l-1} + b^l$$$$a^l = \sigma(z^l)$$$$C = \frac{1}{2} \|y(x)-a^L(x)\|^2$$<p>Set $\delta_j^l = \frac{\partial C}{\partial z_j^l}$. The following 4 backpropagation formulas are the direct consequences of the previous 3 formulas.</p>
+$$\delta^L = \Delta_a C \odot \sigma' (z^L)$$$$\delta^l = ((w^{l+1})^T \delta^{l+1} ) \odot \sigma' (z^l)$$$$\frac{\partial C}{\partial b_j^l} = \delta_j^l$$$$\frac{\partial C}{\partial w_{jk}^{l}} = a_k^{l-1} \delta_j^l$$<p>These 4 formulas can be used to quickly compute the derivatives of the cost function with respect to the weights and the biases. The computation of derivatives starts from the output layer backwards to the first hidden layer, hence the name <strong>backpropagation algorithm</strong><br />
+        <a class="more" href="../back_propagation.html">Lire la suite...</a>
+      </section>
+    </article>
+  </section> <!-- /#content -->
+
+<aside id="sidebar">
+
+  <div class="widget" id="categories">
+    <h2>Categories</h2>
+    <ul>
+      <li ><a href="../category/computer-vision.html">Computer Vision</a></li>
+      <li ><a href="../category/practical-ml.html">Practical ML</a></li>
+      <li class="active"><a href="../category/theoretical-ml.html">Theoretical ML</a></li>
+    </ul>
+  </div>
+
+  
+
+    <div class="widget" id="social">
+      <h2>Social</h2>
+      <ul>
+        <li><a href="https://github.com/experiencor">github</a></li>
+        <li><a href="https://twitter.com/experiencor">twitter</a></li>
+       </ul>
+    </div>
+
+</aside>
+
+  <footer id="footer">
+    <p>Propulsé par <a href="http://docs.notmyidea.org/alexis/pelican/index.html">Pelican</a>.</p>
+  </footer>
+</div> <!-- /#page -->
+<script id="dsq-count-scr" src="//andyhuynh-1.disqus.com/count.js" async></script>
+</body>
+</html>
