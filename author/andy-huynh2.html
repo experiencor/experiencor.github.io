@@ -36,6 +36,24 @@
   <section id="content">
   
     <article class="post">
+      <h2 class="title"><a href="../optical_flow.html">Optical Flow</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-14T22:14:00+01:00" pubdate="pubdate">Sab 14 Januari 2017</time>
+ par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
+Mots-clés: <a href="../tag/linear-algebra.html">Linear Algebra</a>, <a href="../tag/analysis.html">Analysis</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>1st assumption</strong> of Lucas Kanade is the brightness assumption, which assumes that the displaced pixel remains at the same brightness level. With u and v are the displacements of the pixel at $(x,y)$, the 1st assumption gives rise to</p>
+$$0 = I(x+u,y+v,t+1) - I(x,y,t) (1)$$<p>To estimate the amount of displacement, we can analyze the behavior of I(t) and I(t+1) at the vicinity of (x,y). The simplest way to do this is to exhautively search for the values of u and v that satisfy equation (1). This way is computationally expensive. A better method is to use the linear Taylor approximation of I(t+1) at (x,y). The <strong>2nd assumption</strong><br />
+        <a class="more" href="../optical_flow.html">Lire la suite...</a>
+      </section>
+    </article>
+  
+    <article class="post">
       <h2 class="title"><a href="../back_propagation.html">How Backpropagation Work?</a></h2>
         <details class="meta">
           Publié le <time datetime="2017-01-14T22:10:00+01:00" pubdate="pubdate">Sab 14 Januari 2017</time>
