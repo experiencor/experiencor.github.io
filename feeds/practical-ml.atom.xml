@@ -975,7 +975,7 @@ h6:hover .anchor-link {
 
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Objective"&gt;Objective&lt;a class="anchor-link" href="#Objective"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To make a lane follower based on a standard RC car like this &lt;a href="https://www.youtube.com/watch?v=-v6q2dNZTU8"&gt;https://www.youtube.com/watch?v=-v6q2dNZTU8&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="Objective"&gt;Objective&lt;a class="anchor-link" href="#Objective"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;To make a lane follower based on a standard RC car using Raspberry Pi and a camera. The software is a simple Convolutional Network, which takes in the image fetched from the camera and outputs the steering angle.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -983,10 +983,9 @@ h6:hover .anchor-link {
 
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Design"&gt;Design&lt;a class="anchor-link" href="#Design"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The basic idea is to use a Raspberry Pi to control the RC car. The Raspberry Pi makes steering action based on camera image.&lt;/p&gt;
-&lt;p&gt;&lt;img src="images/hardware.jpg" width="500" /&gt;&lt;/p&gt;
+&lt;h2 id="Design"&gt;Design&lt;a class="anchor-link" href="#Design"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src="images/hardware.jpg" width="500" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt; Hardware &lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;For the uninitiated, the receiver of a standard RC car receives throttle and steering signals from the transmitter. The signals are converted to PWM pulses by the receiver to directly control the speed of the motor and the steering angle of the servo. The following figure pictures the wiring of a standard RC car:&lt;/p&gt;
+&lt;p&gt;The receiver of a standard RC car receives throttle and steering signals from the transmitter. The signals are converted to PWM pulses by the receiver to directly control the speed of the motor and the steering angle of the servo. The following figure pictures the wiring of a standard RC car:&lt;/p&gt;
 &lt;p&gt;&lt;img src="images/rc_car.png" width="500" /&gt;&lt;/p&gt;
 &lt;p&gt;During data collection, we will simply hook the steering PWM of the car to pin GPIO17. The script &lt;strong&gt;raspberry_pi/collect_data.py&lt;/strong&gt; will record the values of steering PWM and the associated images. The data of each trial are collectively stored in driving_trial_*. The trial folders are automatically numbered.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt; Software &lt;/strong&gt;&lt;/p&gt;
