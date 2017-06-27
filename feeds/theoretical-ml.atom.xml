@@ -995,7 +995,10 @@ h6:hover .anchor-link {
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Code&lt;/strong&gt; &lt;a href="https://github.com/experiencor/deep-viz-keras"&gt;https://github.com/experiencor/deep-viz-keras&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Code&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/experiencor/deep-viz-keras"&gt;https://github.com/experiencor/deep-viz-keras&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1011,7 +1014,7 @@ h6:hover .anchor-link {
 
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Guided-gradient"&gt;Guided gradient&lt;a class="anchor-link" href="#Guided-gradient"&gt;¶&lt;/a&gt;&lt;/h1&gt;$$SaliencyMap = gradient = \frac{\partial \text{output of a node}}{\partial \text{input image}}$$&lt;p&gt;The formula of guided gradient is the same as that of vanilla gradient except that only positive gradients are allowed to backpropagrate. This means that only the node which has positive activation, $a^l_j &gt;0$, and positive gradient, $\frac{\partial L}{\partial a^l_j} &gt; 0$, has gradient backpropagated.&lt;/p&gt;
+&lt;h1 id="Guided-gradient"&gt;Guided gradient&lt;a class="anchor-link" href="#Guided-gradient"&gt;¶&lt;/a&gt;&lt;/h1&gt;$$SaliencyMap = gradient = \frac{\partial \text{output of a node}}{\partial \text{input image}}$$&lt;p&gt;The formula of guided gradient is the same as that of vanilla gradient except that only positive gradients are allowed to backpropagrate. This means that only the node which has positive activation, $a^l_j &gt;0$, and positive gradient, $\frac{\partial L}{\partial a^l_j} &gt; 0$, let gradient through.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

@@ -1035,7 +1035,10 @@ h6:hover .anchor-link {
 </ul>
 </li>
 </ul>
-<p><strong>Code</strong> <a href="https://github.com/experiencor/deep-viz-keras">https://github.com/experiencor/deep-viz-keras</a></p>
+<p><strong>Code</strong></p>
+<ul>
+<li><a href="https://github.com/experiencor/deep-viz-keras">https://github.com/experiencor/deep-viz-keras</a></li>
+</ul>
 </div>
 </div>
 </div>
@@ -1051,7 +1054,7 @@ h6:hover .anchor-link {
 
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Guided-gradient">Guided gradient<a class="anchor-link" href="#Guided-gradient">¶</a></h1>$$SaliencyMap = gradient = \frac{\partial \text{output of a node}}{\partial \text{input image}}$$<p>The formula of guided gradient is the same as that of vanilla gradient except that only positive gradients are allowed to backpropagrate. This means that only the node which has positive activation, $a^l_j >0$, and positive gradient, $\frac{\partial L}{\partial a^l_j} > 0$, has gradient backpropagated.</p>
+<h1 id="Guided-gradient">Guided gradient<a class="anchor-link" href="#Guided-gradient">¶</a></h1>$$SaliencyMap = gradient = \frac{\partial \text{output of a node}}{\partial \text{input image}}$$<p>The formula of guided gradient is the same as that of vanilla gradient except that only positive gradients are allowed to backpropagrate. This means that only the node which has positive activation, $a^l_j >0$, and positive gradient, $\frac{\partial L}{\partial a^l_j} > 0$, let gradient through.</p>
 </div>
 </div>
 </div>
