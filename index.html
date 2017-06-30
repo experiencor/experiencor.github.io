@@ -208,28 +208,16 @@ w_{t+1} = \underset{w}{\operatorname{argmax}} &\bigg\{g^\top _{1:t}w + \lambda_1
 
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">¶</a></h1><p>This is a proof of concept implementation of YOLOv2 using Keras.</p>
-<p><a href="https://github.com/experiencor/basic-yolo-keras">https://github.com/experiencor/basic-yolo-keras</a></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
+<p><strong>Outline</strong></p>
+<pre><code>* Basic idea
+* Network architecture
+* Loss function
+</code></pre>
+<p><strong> Code </strong></p>
+<pre><code>* https://github.com/experiencor/basic-yolo-keras
 
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Outline of Steps</strong></p>
-<pre><code>+ Initialization of parameters
-    + Download VOC data from http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar
-    + Download pre-trained weights from http://pjreddie.com/media/files/tiny-yolo-voc.weights
-    + Specify the directory of annotations by setting variable *ann_di*
-    + Specify the directory of images by setting variable *img_dir*
-    + Specity the path of pre-trained weights by setting variable *wt_path*
-+ Construct equivalent network in Keras
-    + Network arch from https://github.com/pjreddie/darknet/blob/master/cfg/tiny-yolo-voc.cfg
-+ Load the pretrained weights
-+ Preprocess VOC data
-+ Perform training (for POC, the weights of the last layers are randomized before training)
-+ Perform detection on an image with newly trained weights</code><br />
+</code></pre>
+<h1 id="Basic-idea">Basic idea<a class="anchor-link" href="#Basic-idea">¶</a></h1><p>The basic idea is to consider detection as a pure regression problem. The image is divided into a grid. Each grid cell is responsible for predicting 5 objects which have centers lying inside the cell. There are two key tricks to improve network stability:</p><br />
         <a class="more" href="./yolo_keras.html">Lire la suite...</a>
       </section>
     </article>
