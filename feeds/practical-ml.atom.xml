@@ -7850,19 +7850,20 @@ h6:hover .anchor-link {
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;&lt;strong&gt;Outline&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;* Basic idea
-* Network architecture
-* Loss function
-&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic idea&lt;/li&gt;
+&lt;li&gt;Network architecture&lt;/li&gt;
+&lt;li&gt;Loss function&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt; Code &lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;* https://github.com/experiencor/basic-yolo-keras
-
-&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/experiencor/basic-yolo-keras"&gt;https://github.com/experiencor/basic-yolo-keras&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id="Basic-idea"&gt;Basic idea&lt;a class="anchor-link" href="#Basic-idea"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;The basic idea is to consider detection as a pure regression problem. The image is divided into a grid. Each grid cell is responsible for predicting 5 objects which have centers lying inside the cell. There are two key tricks to improve network stability:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Using Anchors.&lt;/strong&gt; The anchors are learned from the target dataset using dimension clustering. The set of 5 anchors are used corresponding to the 5 objects that each grid cell is responsible to predict.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Coordinate Normalization&lt;/strong&gt;: indirect predictions of x, y, w, h and objectness confidence:&lt;/p&gt;
 $$b_x = \sigma(t_x) + c_x$$$$b_y = \sigma(t_y) + c_y$$$$b_w = p_w e^{t_w}$$$$b_h = p_h e^{t_h}$$$$P(object) \times IOU(b,object) = \sigma(t_0)$$&lt;h1 id="Network-architecture"&gt;Network architecture&lt;a class="anchor-link" href="#Network-architecture"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;p align="center"&gt;
-&lt;img src="images/yolo_model.png" width="150" /&gt;
+&lt;img src="images/yolo.jpg" width="150" /&gt;
 &lt;/p&gt;&lt;h1 id="Loss-function"&gt;Loss function&lt;a class="anchor-link" href="#Loss-function"&gt;¶&lt;/a&gt;&lt;/h1&gt;$$\begin{multline} \lambda_\textbf{coord} \sum_{i = 0}^{S^2} \sum_{j = 0}^{B} L_{ij}^{\text{obj}} \left[ \left( x_i - \hat{x}_i \right)^2 + \left( y_i - \hat{y}_i \right)^2 \right] \\ + \lambda_\textbf{coord} \sum_{i = 0}^{S^2} \sum_{j = 0}^{B} L_{ij}^{\text{obj}} \left[ \left( \sqrt{w_i} - \sqrt{\hat{w}_i} \right)^2 + \left( \sqrt{h_i} - \sqrt{\hat{h}_i} \right)^2 \right] \\ + \sum_{i = 0}^{S^2} \sum_{j = 0}^{B} L_{ij}^{\text{obj}} \left( C_i - \hat{C}_i \right)^2 \\ + \lambda_\textrm{noobj} \sum_{i = 0}^{S^2} \sum_{j = 0}^{B} L_{ij}^{\text{noobj}} \left( C_i - \hat{C}_i \right)^2 \\ + \sum_{i = 0}^{S^2} L_i^{\text{obj}} \sum_{c \in \textrm{classes}} \left( p_i(c) - \hat{p}_i(c) \right)^2 \end{multline}$$
 &lt;/div&gt;
 &lt;/div&gt;
