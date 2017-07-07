@@ -36,6 +36,39 @@
   <section id="content">
   
     <article class="post">
+      <h2 class="title"><a href="./object_tracking.html">Object Tracking</a></h2>
+        <details class="meta">
+          Publié le <time datetime="2017-01-14T22:30:00+01:00" pubdate="pubdate">Sab 14 Januari 2017</time>
+ par Andy Huynh dans «<a href="./category/computer-vision.html">Computer Vision</a>».  
+Mots-clés: <a href="./tag/probability.html">Probability</a></p>        </details> 
+      <section class="post_content">
+        
+<div class="cell border-box-sizing text_cell rendered">
+
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Definition of Posterior Belief:</p>
+$$Bel(x_t) \equiv P(x_t | z_{1:t}, u_{1:t})$$<p>1st Assumption: Markovian Property</p>
+$$P(x_t | x_{t-1}, z_{1:t-1}, u_{1:t}) = P(x_t | x_{t-1}, u_t)$$<p>2nd Assumption: Sensor Independent</p>
+$$P(z_t | x_t, z_{1:t-1}, u_{1:t}) = P(z_t | x_t)$$<p>Graphical Model Illustration</p>
+<p><img src="images/model.png" width="350" /></p>
+<p>Recursive relationship between $Bel(x_t)$ and $Bel(x_{t-1})$</p>
+\begin{equation}
+\begin{split}
+Bel(x_t) & = P(x_t | z_{1:t}, u_{1:t}) \\
+  & = \eta P(z_t | x_t, z_{1:t-1}, u_{1:t})P(x_t | z_{1:t-1}, u_{1:t}) \\
+  & = \eta P(z_t | x_t)P(x_t | z_{1:t-1}, u_{1:t}) \\
+  & = \eta P(z_t | x_t)\int P(x_t | x_{t-1}, z_{1:t-1}, u_{1:t})P(x_{t-1} | z_{1:t-1}, u_{1:t})dx_{t-1} \\
+  & = \eta P(z_t | x_t)\int P(x_t | x_{t-1}, u_t)P(x_{t-1} | z_{1:t-1}, u_{1:t-1})dx_{t-1} \\
+  & = \eta P(z_t | x_t)\int P(x_t | x_{t-1}, u_t)Bel(x_{t-1})dx_{t-1}
+\end{split}
+\end{equation}
+</div><br />
+        <a class="more" href="./object_tracking.html">Lire la suite...</a>
+      </section>
+    </article>
+  
+    <article class="post">
       <h2 class="title"><a href="./optical_flow.html">Optical Flow</a></h2>
         <details class="meta">
           Publié le <time datetime="2017-01-14T22:14:00+01:00" pubdate="pubdate">Sab 14 Januari 2017</time>
