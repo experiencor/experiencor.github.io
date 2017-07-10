@@ -1,423 +1,167 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <title>Home - Welcome</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" href="./theme/css/main.css" type="text/css" />
-  <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Flux ATOM" />
-  <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-  "HTML-CSS": {
-  styles: {
-  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
-  },
-  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
-  });
-</script>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Andy Huynh" />
+        <meta name="copyright" content="Andy Huynh" />
 
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+        <title>Home
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="./theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="./theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="./theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="./theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="./theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="./theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="./theme/images/apple-touch-icon-144x144.png" />
+        <link href="localhost:8899/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Full Atom Feed" />
+        <link href="localhost:8899/feeds/Computer-Vision.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Computer Vision Category Atom Feed" />
+        <link href="localhost:8899/feeds/Practical-ML.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Practical ML Category Atom Feed" />
+        <link href="localhost:8899/feeds/Theoretical-ML.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Theoretical ML Category Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>Home</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li  class="active"><a href=".">Home</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<div class="row-fluid">
 
-</head>
-<body>
-<div id="page">
+    <div class="row-fluid">
 
-  <header id="header">
-    <h1><a href="./index.html">Home</a></h1>
-  </header>
-
-<nav id="menu">
-  <a href="./index.html">Home</a>
-  <a href="./categories.html">Categories</a>
-  <a href="./tags.html">Most Visited</a>
-  <a href="./archives.html">Archives</a>
-
-</nav> <!-- /#nav -->
-  <section id="content">
-  
-    <article class="post">
-      <h2 class="title"><a href="./basic_ml.html">A Review of Machine Learning Algorithms</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-07-07T22:00:00+02:00" pubdate="pubdate">Jum 07 Juli 2017</time>
- par Andy Huynh dans «<a href="./category/theoretical-ml.html">Theoretical ML</a>».  
-        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong> Outline </strong></p>
-<ul>
-<li>Regression<ul>
-<li>Least squares [implemented]</li>
-<li>Ridge regression [implemented]</li>
-<li>Gaussian process [implemented]</li>
-</ul>
-</li>
-<li>Classification<ul>
-<li>Gaussian Bayes [implemented]</li>
-<li>Naive Bayes (Poisson) [implemented]</li>
-<li>Decision tree [implemented]</li>
-<li>Support vector machine [implemented]</li>
-<li>kNN        </li>
-<li>Boostrap aggreation: random forest </li>
-<li>Adaptive boostrap</li>
-<li>Logistic regression</li>
-</ul>
-</li>
-<li>Clustering<ul>
-<li>k-mean [implemented]</li>
-<li>Gaussian mixture model [implemented]</li>
-<li>Recommendation system (PMF)</li>
-<li>Topic modeling (NMF)</li>
-<li>Principle component analysis</li>
-<li>Probabilistic PCA</li>
-<li>Kernel PCA</li>
-</ul>
-</li>
-</ul>
-<p><strong>Code</strong></p>
-<ul>
-<li><a href="https://github.com/experiencor/basic-machine-learning">https://github.com/experiencor/basic-machine-learning</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I come across this wonderful course on Machine Learning by ColumbiaX [<a href="https://courses.edx.org/courses/course-v1:ColumbiaX+CSMM.102x+2T2017/info">https://courses.edx.org/courses/course-v1:ColumbiaX+CSMM.102x+2T2017/info</a><br />
-        <a class="more" href="./basic_ml.html">Lire la suite...</a>
-      </section>
-    </article>
-  
-    <article class="post">
-      <h2 class="title"><a href="./cnn_visual.html">Visualizing and Understanding Convolutional Network</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-06-22T20:00:00+02:00" pubdate="pubdate">Kam 22 Juni 2017</time>
- par Andy Huynh dans «<a href="./category/theoretical-ml.html">Theoretical ML</a>».  
-Mots-clés: <a href="./tag/geometry.html">Geometry</a></p>        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong> Outline </strong></p>
-<ul>
-<li>Gradient method: take the gradient of certain node with respect to the input image<ul>
-<li>Vanilla gradient [<a href="https://arxiv.org/abs/1312.6034">https://arxiv.org/abs/1312.6034</a>]</li>
-<li>Guided backpropagation [<a href="https://arxiv.org/abs/1412.6806">https://arxiv.org/abs/1412.6806</a>]</li>
-<li>Integrated gradient [<a href="https://arxiv.org/abs/1703.01365">https://arxiv.org/abs/1703.01365</a>]</li>
-<li>Visual backpropagation [<a href="https://arxiv.org/abs/1611.05418">https://arxiv.org/abs/1611.05418</a>]</li>
-<li>Layer-wise relevance propagation</li>
-<li>Class activation mapping</li>
-<li>Gradient-weighted class activation mapping</li>
-<li>Deconvolution</li>
-</ul>
-</li>
-<li>Activation maximization method: find the input image that maximally activates a node</li>
-<li>Other ideas<ul>
-<li>style transfer</li>
-<li>deep dream</li>
-</ul>
-</li>
-</ul>
-<p><strong>Code</strong></p>
-<ul>
-<li><a href="https://github.com/experiencor/deep-viz-keras">https://github.com/experiencor/deep-viz-keras</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Vanilla-gradient">Vanilla gradient<a class="anchor-link" href="#Vanilla-gradient">¶</a></h1>$$SaliencyMap = gradient = \frac{\partial \text{output of a node}}{\partial \text{input image}}$$
-</div><br />
-        <a class="more" href="./cnn_visual.html">Lire la suite...</a>
-      </section>
-    </article>
-  
-    <article class="post">
-      <h2 class="title"><a href="./self_driving_toy_car.html">Self Driving Toy Car</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-06-13T20:00:00+02:00" pubdate="pubdate">Sel 13 Juni 2017</time>
- par Andy Huynh dans «<a href="./category/practical-ml.html">Practical ML</a>».  
-Mots-clés: <a href="./tag/machine-learning.html">Machine Learning</a></p>        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Objective">Objective<a class="anchor-link" href="#Objective">¶</a></h2><p>To make a lane follower based on a standard RC car using Raspberry Pi and a camera. The software is a simple Convolutional Network, which takes in the image fetched from the camera and outputs the steering angle.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Design">Design<a class="anchor-link" href="#Design">¶</a></h2><p><img src="images/hardware.jpg" width="500" /></p>
-<p><strong> Hardware </strong></p>
-<p>The receiver of a standard RC car receives throttle and steering signals from the transmitter. The signals are converted to PWM pulses by the receiver to directly control the speed of the motor and the steering angle of the servo. The following figure pictures the wiring of a standard RC car:</p><br />
-        <a class="more" href="./self_driving_toy_car.html">Lire la suite...</a>
-      </section>
-    </article>
-  
-    <article class="post">
-      <h2 class="title"><a href="./ftrl_adp.html">Follow the Regularized Leader with Adaptive Decaying Proximal</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-05-15T22:10:00+02:00" pubdate="pubdate">Sen 15 Mei 2017</time>
- par Andy Huynh dans «<a href="./category/theoretical-ml.html">Theoretical ML</a>».  
-Mots-clés: <a href="./tag/linear-algebra.html">Linear Algebra</a>, <a href="./tag/analaysis.html">Analaysis</a></p>        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Derivation-of-FTRL-ADP">Derivation of FTRL-ADP<a class="anchor-link" href="#Derivation-of-FTRL-ADP">¶</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Problem">Problem<a class="anchor-link" href="#Problem">¶</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-\begin{equation} \label{eq:ftrl_dp}
-\begin{split}
-w_{t+1} = \underset{w}{\operatorname{argmax}} &\bigg\{g^\top _{1:t}w + \lambda_1\|w\|_1 + \frac{1}{2}\lambda_2\|w\|_2^2 + \frac{1}{2}\lambda_p\sum_{s=1}^{t}\sigma_{t,s} \|w-w_s\|^2_2\bigg\} \\ &\text{ in which } g^\top _{1:t} = \sum_{i=1}^{t}g^\top _t \text{ and } \sigma_{t,s} = \gamma^{t-s}
-\end{split}
-\end{equation}
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This is a variant of the FTRL-proximal proposed by McMahan et al. in Ad click prediction: a view from the trenches.</p><br />
-        <a class="more" href="./ftrl_adp.html">Lire la suite...</a>
-      </section>
-    </article>
-  
-    <article class="post">
-      <h2 class="title"><a href="./sdc_3d.html">3D Vehicle Detection</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-05-01T22:10:00+02:00" pubdate="pubdate">Sen 01 Mei 2017</time>
- par Andy Huynh dans «<a href="./category/practical-ml.html">Practical ML</a>».  
-        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Background">Background<a class="anchor-link" href="#Background">¶</a></h1><p>Perception unit is a key component of self driving car. It relies on various sensors such as LIDAR, CAMERA and RADAR to identify and locate surrounding objects.</p>
-<p>The most important objects to be detected are other vehicles.</p>
-<p>[This is a work in progress for UDACITY-DIDI challenge.]</p>
-<p>[github: <a href="https://github.com/experiencor/didi-starter/tree/master/simple_solution">https://github.com/experiencor/didi-starter/tree/master/simple_solution</a>]</p>
-<p><strong>Problem</strong></p>
-<p>Given the LIDAR and CAMERA data, determine the location and the orientation in 3D of surrounding vehicles.</p><br />
-        <a class="more" href="./sdc_3d.html">Lire la suite...</a>
-      </section>
-    </article>
-  
-    <article class="post">
-      <h2 class="title"><a href="./mal_url.html">Predicting Malicious URLs</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-04-20T22:22:00+02:00" pubdate="pubdate">Kam 20 April 2017</time>
- par Andy Huynh dans «<a href="./category/practical-ml.html">Practical ML</a>».  
-        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Background">Background<a class="anchor-link" href="#Background">¶</a></h1><p>Traditional firewall relies on whitelist and blacklist to decide whether to allow or block a domain name.  This scheme is problematic as the lists need to be updated manually and regularly. Outdated lists would limit the accessibility of the network and/or fail to detect novel malicious domain names.</p>
-<p>So we aim to train a machine learning model to predict whether a domain name is malicious. The model can be fully developped into a smart firewall solution to police network traffic without relying on static lists.</p><br />
-        <a class="more" href="./mal_url.html">Lire la suite...</a>
-      </section>
-    </article>
-  
-    <article class="post">
-      <h2 class="title"><a href="./yolo_keras.html">Basic Yolo with Keras</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-03-22T22:00:00+01:00" pubdate="pubdate">Rab 22 Maret 2017</time>
- par Andy Huynh dans «<a href="./category/practical-ml.html">Practical ML</a>».  
-        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Outline</strong></p>
-<ul>
-<li>Basic idea</li>
-<li>Network architecture</li>
-<li>Loss function</li>
-</ul>
-<p><strong> Code </strong></p>
-<ul>
-<li><a href="https://github.com/experiencor/basic-yolo-keras">https://github.com/experiencor/basic-yolo-keras</a></li>
-</ul>
-<h1 id="Basic-idea">Basic idea<a class="anchor-link" href="#Basic-idea">¶</a></h1><p>The basic idea is to consider detection as a pure regression problem. The image is divided into a grid. Each grid cell is responsible for predicting 5 objects which have centers lying inside the cell. There are two key tricks to improve network stability:</p><br />
-        <a class="more" href="./yolo_keras.html">Lire la suite...</a>
-      </section>
-    </article>
-  
-    <article class="post">
-      <h2 class="title"><a href="./segmentation.html">Image Segmentation</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-02-19T08:00:00+01:00" pubdate="pubdate">Min 19 Pebruari 2017</time>
- par Andy Huynh dans «<a href="./category/computer-vision.html">Computer Vision</a>».  
-        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Experiments with some traditional segmentation methods. Outline:</p>
-<ul>
-<li>DBSCAN</li>
-<li>K-mean</li>
-<li>Meanshift</li>
-<li>Graphcut</li>
-<li>Watershed</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Segmentation-by-DBSCAN">Segmentation by DBSCAN<a class="anchor-link" href="#Segmentation-by-DBSCAN">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input"><br />
-        <a class="more" href="./segmentation.html">Lire la suite...</a>
-      </section>
-    </article>
-  
-    <article class="post">
-      <h2 class="title"><a href="./weight_init.html">Weight Initialization</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-01-26T10:00:00+01:00" pubdate="pubdate">Kam 26 Januari 2017</time>
- par Andy Huynh dans «<a href="./category/theoretical-ml.html">Theoretical ML</a>».  
-        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Why-setting-all-weights-and-biases-to-0-is-a-bad-idea?">Why setting all weights and biases to 0 is a bad idea?<a class="anchor-link" href="#Why-setting-all-weights-and-biases-to-0-is-a-bad-idea?">¶</a></h1><p>As $a_j^l = \sigma\big(\sum _k w_{jk}^l a_k^{l-1} +b_j^l\big)$, all nodes will produce the same activation. Although the weights and the biases would later diverge if the scalar components of the input vector are different, this is still not a good idea for the general input.</p><br />
-        <a class="more" href="./weight_init.html">Lire la suite...</a>
-      </section>
-    </article>
-  
-    <article class="post">
-      <h2 class="title"><a href="./learning_rate.html">Problem with Sigmoid and Sum of Squares Loss</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-01-17T22:30:00+01:00" pubdate="pubdate">Sel 17 Januari 2017</time>
- par Andy Huynh dans «<a href="./category/theoretical-ml.html">Theoretical ML</a>».  
-Mots-clés: <a href="./tag/analysis.html">Analysis</a></p>        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Sigmoid-and-Quadratic-Cost">Sigmoid and Quadratic Cost<a class="anchor-link" href="#Sigmoid-and-Quadratic-Cost">¶</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-$$a^L = \frac{1}{1 + e^{-z^L}}$$
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-$$C = \sum_j (a^L_j-y_j)^2$$
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Backpropagating the loss to the biases and weights of the output layer:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-$$\frac{\partial C}{\partial b_j^L} = \frac{\partial C}{\partial a_j^L}\frac{\partial a_j^L}{\partial b_j^L} = (a_j^L-y_j)\sigma'(z_j^L)$$$$\frac{\partial C}{\partial w_{jk}^L} = \frac{\partial C}{\partial a_j^L}\frac{\partial a_j^L}{\partial w_{jk}^L} = a_k^{L-1}(a_j^L-y_j)\sigma'(z_j^L)$$<p>As $\sigma'(z_j^L) = \sigma(z_j^L) (1- \sigma(z_j^L))$, $\frac{\partial C}{\partial b_j^L}$ and $\frac{\partial C}{\partial w_{jk}^L}$ become small when $\sigma(z_j^L)\approx 0$ or $\sigma(z_j^L) \approx 1$. This behavior is bad when $\sigma(z_j^L)$ is near to the wrong extreme.</p><br />
-        <a class="more" href="./learning_rate.html">Lire la suite...</a>
-      </section>
-    </article>
-
-      <nav class="pagination">
-      Page <b>1</b> sur <b>2</b>
-        <a href="./index2.html">&#62;&#62;</a>
-      </nav>
-
-  </section> <!-- /#content -->
-
-<aside id="sidebar">
-
-  <div class="widget" id="categories">
-    <h2>Categories</h2>
-    <ul>
-      <li ><a href="./category/computer-vision.html">Computer Vision</a></li>
-      <li ><a href="./category/practical-ml.html">Practical ML</a></li>
-      <li ><a href="./category/theoretical-ml.html">Theoretical ML</a></li>
-    </ul>
-  </div>
-
-  
-
-    <div class="widget" id="social">
-      <h2>Social</h2>
-      <ul>
-        <li><a href="https://github.com/experiencor">github</a></li>
-        <li><a href="https://twitter.com/experiencor">twitter</a></li>
-       </ul>
+        <div class="span4">
+            <header>
+            <h1 id="my-projects">My Projects</h1>
+            <ul class="list-all-articles">
+                <li>
+                <a href="https://github.com/experiencor/self-driving-toy-car" title="Self Driving Toy Car">Self Driving Toy Car</a> <span class="proj_desc">A lane follower using a toy RC car and end to end learning.</span>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="https://github.com/experiencor/basic-yolo-keras" title="Object Detection">Object Detection</a> <span class="proj_desc">A clean implementation of YOLOv2 for object detection using keras.</span>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="https://github.com/experiencor/image-to-3d-bbox" title="3D Box Regression">3D Box Regression</a> <span class="proj_desc">A deep network to predict 3D bouding box of car in 2D image.</span>
+                </li>
+            </ul>
+        </div>
     </div>
 
-</aside>
-
-  <footer id="footer">
-    <p>Propulsé par <a href="http://docs.notmyidea.org/alexis/pelican/index.html">Pelican</a>.</p>
-  </footer>
-</div> <!-- /#page -->
-<script id="dsq-count-scr" src="//andyhuynh-1.disqus.com/count.js" async></script>
-</body>
+    <div class="row-fluid">
+        <div class="span12">
+            <header>
+            <h1 id="recent-posts">Recent Posts <a id="allposts" href="./archives.html">all posts</a></h1>
+            </header>
+            <ul class="list-all-articles">
+                <li>
+                <a href="./basic_ml.html">A Review of Machine Learning Algorithms  </a> 
+                <time pubdate="pubdate" datetime="2017-07-07T22:00:00+02:00">Jum 07 Juli 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="./cnn_visual.html">Visualizing and Understanding Convolutional Network  </a> 
+                <time pubdate="pubdate" datetime="2017-06-22T20:00:00+02:00">Kam 22 Juni 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="./self_driving_toy_car.html">Self Driving Toy Car  </a> 
+                <time pubdate="pubdate" datetime="2017-06-13T20:00:00+02:00">Sel 13 Juni 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="./ftrl_adp.html">Follow the Regularized Leader with Adaptive Decaying Proximal  </a> 
+                <time pubdate="pubdate" datetime="2017-05-15T22:10:00+02:00">Sen 15 Mei 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="./sdc_3d.html">3D Vehicle Detection  </a> 
+                <time pubdate="pubdate" datetime="2017-05-01T22:10:00+02:00">Sen 01 Mei 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="./yolo_keras.html">Basic Yolo with Keras  </a> 
+                <time pubdate="pubdate" datetime="2017-03-22T22:00:00+01:00">Rab 22 Maret 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="./segmentation.html">Image Segmentation  </a> 
+                <time pubdate="pubdate" datetime="2017-02-19T08:00:00+01:00">Min 19 Pebruari 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="./weight_init.html">Weight Initialization  </a> 
+                <time pubdate="pubdate" datetime="2017-01-26T10:00:00+01:00">Kam 26 Januari 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="./learning_rate.html">Problem with Sigmoid and Sum of Squares Loss  </a> 
+                <time pubdate="pubdate" datetime="2017-01-17T22:30:00+01:00">Sel 17 Januari 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="./object_tracking.html">Object Tracking  </a> 
+                <time pubdate="pubdate" datetime="2017-01-14T22:30:00+01:00">Sab 14 Januari 2017</time>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+    </body>
 </html>

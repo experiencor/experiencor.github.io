@@ -1,45 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <title>Home - Hough Transform</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" href="./theme/css/main.css" type="text/css" />
-  <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Flux ATOM" />
-  <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-  "HTML-CSS": {
-  styles: {
-  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
-  },
-  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
-  });
-</script>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Andy Huynh" />
+        <meta name="copyright" content="Andy Huynh" />
 
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<meta name="keywords" content="Trigonometry, Computer Vision, " />
+        <title>Hough Transform  · Home
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="./theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="./theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="./theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="./theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="./theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="./theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="./theme/images/apple-touch-icon-144x144.png" />
+        <link href="localhost:8899/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Full Atom Feed" />
+        <link href="localhost:8899/feeds/Computer-Vision.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Computer Vision Category Atom Feed" />
+        <link href="localhost:8899/feeds/Practical-ML.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Practical ML Category Atom Feed" />
+        <link href="localhost:8899/feeds/Theoretical-ML.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Theoretical ML Category Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>Home</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li ><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="./hough_transform.html"> Hough Transform  </a></h1>
+    </header>
+</div>
 
-</head>
-<body>
-<div id="page">
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
 
-  <header id="header">
-    <h1><a href="./index.html">Home</a></h1>
-  </header>
-
-<nav id="menu">
-  <a href="./index.html">Home</a>
-  <a href="./categories.html">Categories</a>
-  <a href="./tags.html">Most Visited</a>
-  <a href="./archives.html">Archives</a>
-
-</nav> <!-- /#nav -->
-  <section id="content">
-        
-  <article class="post">
-        <h2 class="page_title"><a href="hough_transform.html" rel="bookmark" title="Home - Hough Transform">Hough Transform</a></h2>
-
-        <section class="post_content">
-        <style type="text/css">/*!
+            <style type="text/css">/*!
 *
 * IPython notebook
 *
@@ -8872,70 +8895,112 @@ mAAZ1kIIIYQQQgghxATIsBZCCCGEEEIIISbg/34wJ1HP2+nmAAAAAElFTkSuQmCC
 }
 </script>
 
-        </section>
-
-        <details class="meta">
-          Publié le <time datetime="2017-01-12T21:00:00+01:00" pubdate="pubdate">Kam 12 Januari 2017</time>
- par Andy Huynh dans «<a href="./category/computer-vision.html">Computer Vision</a>».  
-Mots-clés: <a href="./tag/trigonometry.html">Trigonometry</a></p>        </details>   </article>
-
+<section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="./hough_transform.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
 <div id="disqus_thread"></div>
-<script>
+<script type="text/javascript">
+    var disqus_shortname = 'experiencor-github-io';
+        var disqus_identifier = './hough_transform.html';
+    var disqus_url = './hough_transform.html';
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://andyhuynh-1.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-  </section> <!-- /#content -->
-
-<aside id="sidebar">
-
-  <div class="widget" id="categories">
-    <h2>Categories</h2>
-    <ul>
-      <li class="active"><a href="./category/computer-vision.html">Computer Vision</a></li>
-      <li ><a href="./category/practical-ml.html">Practical ML</a></li>
-      <li ><a href="./category/theoretical-ml.html">Theoretical ML</a></li>
-    </ul>
-  </div>
-
-  <div class="widget" id="tags">
-    <h2>Mots-clés:</h2>
-    <ul>
-      <li><a href="./tag/trigonometry.html">Trigonometry</a></li>
-      <li><a class="more" href="./tags.html">Plus...</a></li>
-    </ul>
-  </div>
-  
-
-    <div class="widget" id="social">
-      <h2>Social</h2>
-      <ul>
-        <li><a href="https://github.com/experiencor">github</a></li>
-        <li><a href="https://twitter.com/experiencor">twitter</a></li>
-       </ul>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>                </div>
+            </div>
+        </div>
     </div>
+</div>
+</section>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="./convolution.html" title="Previous: Convolution Operation">Convolution Operation</a></li>
+ 
+                <li class="next_article"><a href="./fourier_transform.html" title="Next: Fourier Transform">Fourier Transform</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2017-01-12T21:00:00+01:00">Jan 12, 2017</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Computer-Vision-ref">Computer Vision</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#Trigonometry-ref">Trigonometry
+                    <span>1</span>
+</a></li>
+            </ul>
 
-</aside>
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
 
-  <footer id="footer">
-    <p>Propulsé par <a href="http://docs.notmyidea.org/alexis/pelican/index.html">Pelican</a>.</p>
-  </footer>
-</div> <!-- /#page -->
-<script id="dsq-count-scr" src="//andyhuynh-1.disqus.com/count.js" async></script>
-</body>
+<script type="text/javascript">
+    var disqus_shortname = 'experiencor-github-io';
+
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+        <script  language="javascript" type="text/javascript">
+            function uncollapse() {
+                var hash_str = window.location.hash;
+                if (window.location.hash.match(/^#comment-\d+$/))
+                {
+                    var hash_str = '#disqus_thread';
+                }
+                $(hash_str).collapse({
+                    toggle: true
+                    })
+            }
+        </script>
+
+        <script type="text/javascript" language="JavaScript">
+            uncollapse(); 
+        </script>
+    </body>
 </html>

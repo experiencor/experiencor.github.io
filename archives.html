@@ -1,157 +1,144 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <title>Home - Archives</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" href="./theme/css/main.css" type="text/css" />
-  <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Flux ATOM" />
-  <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-  "HTML-CSS": {
-  styles: {
-  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
-  },
-  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
-  });
-</script>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Andy Huynh" />
+        <meta name="copyright" content="Andy Huynh" />
 
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+        <title>All Posts · Home
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="./theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="./theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="./theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="./theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="./theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="./theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="./theme/images/apple-touch-icon-144x144.png" />
+        <link href="localhost:8899/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Full Atom Feed" />
+        <link href="localhost:8899/feeds/Computer-Vision.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Computer Vision Category Atom Feed" />
+        <link href="localhost:8899/feeds/Practical-ML.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Practical ML Category Atom Feed" />
+        <link href="localhost:8899/feeds/Theoretical-ML.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Theoretical ML Category Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./"><span class=site-name>Home</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href=".">Home</a></li>
+                            <li ><a href="./categories.html">Categories</a></li>
+                            <li ><a href="./tags.html">Tags</a></li>
+                            <li  class="active"><a href="./archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="./search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
 
-</head>
-<body>
-<div id="page">
-
-  <header id="header">
-    <h1><a href="./index.html">Home</a></h1>
-  </header>
-
-<nav id="menu">
-  <a href="./index.html">Home</a>
-  <a href="./categories.html">Categories</a>
-  <a href="./tags.html">Most Visited</a>
-  <a href="./archives.html">Archives</a>
-
-</nav> <!-- /#nav -->
-  <section id="content">
-  <h2 class="page_title">Archives</h1>
-  <table id="archives">
-    <tbody>
-      <tr>
-        <th>Date</th>
-        <th>Article</th>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='basic_ml.html'>A Review of Machine Learning Algorithms</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='cnn_visual.html'>Visualizing and Understanding Convolutional Network</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='self_driving_toy_car.html'>Self Driving Toy Car</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='ftrl_adp.html'>Follow the Regularized Leader with Adaptive Decaying Proximal</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='sdc_3d.html'>3D Vehicle Detection</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='mal_url.html'>Predicting Malicious URLs</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='yolo_keras.html'>Basic Yolo with Keras</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='segmentation.html'>Image Segmentation</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='weight_init.html'>Weight Initialization</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='learning_rate.html'>Problem with Sigmoid and Sum of Squares Loss</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='object_tracking.html'>Object Tracking</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='optical_flow.html'>Optical Flow</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='back_propagation.html'>How Backpropagation Work?</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='corner_detection.html'>Corner Detection</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='projective_geometry.html'>Projective Geometry</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='camera_geometry.html'>Calibration Matrix</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='stereo_geometry.html'>Stereo Geometry</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='fourier_transform.html'>Fourier Transform</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='hough_transform.html'>Hough Transform</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href='convolution.html'>Convolution Operation</a></td>
-      </tr>
-    </tbody>
-  </table>
-  </section> <!-- /#content -->
-
-<aside id="sidebar">
-
-  <div class="widget" id="categories">
-    <h2>Categories</h2>
-    <ul>
-      <li ><a href="./category/computer-vision.html">Computer Vision</a></li>
-      <li ><a href="./category/practical-ml.html">Practical ML</a></li>
-      <li ><a href="./category/theoretical-ml.html">Theoretical ML</a></li>
-    </ul>
-  </div>
-
-  
-
-    <div class="widget" id="social">
-      <h2>Social</h2>
-      <ul>
-        <li><a href="https://github.com/experiencor">github</a></li>
-        <li><a href="https://twitter.com/experiencor">twitter</a></li>
-       </ul>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/archives.html">All Posts</a></h1>
+    </header>
+</div>
+<div class="row-fluid">
+    <div class="span8 offset2">
+        <ul class="list-all-articles">
+            <li><a href="./basic_ml.html">A Review of Machine Learning Algorithms  </a>
+            <time pubdate="pubdate" datetime="2017-07-07T22:00:00+02:00">Jum 07 Juli 2017</time>
+            </li>
+            <li><a href="./cnn_visual.html">Visualizing and Understanding Convolutional Network  </a>
+            <time pubdate="pubdate" datetime="2017-06-22T20:00:00+02:00">Kam 22 Juni 2017</time>
+            </li>
+            <li><a href="./self_driving_toy_car.html">Self Driving Toy Car  </a>
+            <time pubdate="pubdate" datetime="2017-06-13T20:00:00+02:00">Sel 13 Juni 2017</time>
+            </li>
+            <li><a href="./ftrl_adp.html">Follow the Regularized Leader with Adaptive Decaying Proximal  </a>
+            <time pubdate="pubdate" datetime="2017-05-15T22:10:00+02:00">Sen 15 Mei 2017</time>
+            </li>
+            <li><a href="./sdc_3d.html">3D Vehicle Detection  </a>
+            <time pubdate="pubdate" datetime="2017-05-01T22:10:00+02:00">Sen 01 Mei 2017</time>
+            </li>
+            <li><a href="./yolo_keras.html">Basic Yolo with Keras  </a>
+            <time pubdate="pubdate" datetime="2017-03-22T22:00:00+01:00">Rab 22 Maret 2017</time>
+            </li>
+            <li><a href="./segmentation.html">Image Segmentation  </a>
+            <time pubdate="pubdate" datetime="2017-02-19T08:00:00+01:00">Min 19 Pebruari 2017</time>
+            </li>
+            <li><a href="./weight_init.html">Weight Initialization  </a>
+            <time pubdate="pubdate" datetime="2017-01-26T10:00:00+01:00">Kam 26 Januari 2017</time>
+            </li>
+            <li><a href="./learning_rate.html">Problem with Sigmoid and Sum of Squares Loss  </a>
+            <time pubdate="pubdate" datetime="2017-01-17T22:30:00+01:00">Sel 17 Januari 2017</time>
+            </li>
+            <li><a href="./object_tracking.html">Object Tracking  </a>
+            <time pubdate="pubdate" datetime="2017-01-14T22:30:00+01:00">Sab 14 Januari 2017</time>
+            </li>
+            <li><a href="./optical_flow.html">Optical Flow  </a>
+            <time pubdate="pubdate" datetime="2017-01-14T22:14:00+01:00">Sab 14 Januari 2017</time>
+            </li>
+            <li><a href="./back_propagation.html">How Backpropagation Work?  </a>
+            <time pubdate="pubdate" datetime="2017-01-14T22:10:00+01:00">Sab 14 Januari 2017</time>
+            </li>
+            <li><a href="./corner_detection.html">Corner Detection  </a>
+            <time pubdate="pubdate" datetime="2017-01-14T22:00:00+01:00">Sab 14 Januari 2017</time>
+            </li>
+            <li><a href="./projective_geometry.html">Projective Geometry  </a>
+            <time pubdate="pubdate" datetime="2017-01-14T21:10:00+01:00">Sab 14 Januari 2017</time>
+            </li>
+            <li><a href="./camera_geometry.html">Calibration Matrix  </a>
+            <time pubdate="pubdate" datetime="2017-01-13T22:00:00+01:00">Jum 13 Januari 2017</time>
+            </li>
+            <li><a href="./stereo_geometry.html">Stereo Geometry  </a>
+            <time pubdate="pubdate" datetime="2017-01-13T20:00:00+01:00">Jum 13 Januari 2017</time>
+            </li>
+            <li><a href="./fourier_transform.html">Fourier Transform  </a>
+            <time pubdate="pubdate" datetime="2017-01-12T22:00:00+01:00">Kam 12 Januari 2017</time>
+            </li>
+            <li><a href="./hough_transform.html">Hough Transform  </a>
+            <time pubdate="pubdate" datetime="2017-01-12T21:00:00+01:00">Kam 12 Januari 2017</time>
+            </li>
+            <li><a href="./convolution.html">Convolution Operation  </a>
+            <time pubdate="pubdate" datetime="2017-01-12T20:00:00+01:00">Kam 12 Januari 2017</time>
+            </li>
+        </ul>
     </div>
+</div>
 
-</aside>
-
-  <footer id="footer">
-    <p>Propulsé par <a href="http://docs.notmyidea.org/alexis/pelican/index.html">Pelican</a>.</p>
-  </footer>
-</div> <!-- /#page -->
-<script id="dsq-count-scr" src="//andyhuynh-1.disqus.com/count.js" async></script>
-</body>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+    </body>
 </html>

@@ -1,369 +1,167 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <title>Home - Computer Vision</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" href="../theme/css/main.css" type="text/css" />
-  <link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Flux ATOM" />
-  <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-  "HTML-CSS": {
-  styles: {
-  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
-  },
-  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
-  });
-</script>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Andy Huynh" />
+        <meta name="copyright" content="Andy Huynh" />
 
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+        <title>Home
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="../theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="../theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="../theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="../theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="../theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="../theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="../theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="../theme/images/apple-touch-icon-144x144.png" />
+        <link href="localhost:8899/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Full Atom Feed" />
+        <link href="localhost:8899/feeds/Computer-Vision.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Computer Vision Category Atom Feed" />
+        <link href="localhost:8899/feeds/Practical-ML.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Practical ML Category Atom Feed" />
+        <link href="localhost:8899/feeds/Theoretical-ML.atom.xml" type="application/atom+xml" rel="alternate" title="Home - Theoretical ML Category Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="../"><span class=site-name>Home</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="..">Home</a></li>
+                            <li ><a href="../categories.html">Categories</a></li>
+                            <li ><a href="../tags.html">Tags</a></li>
+                            <li ><a href="../archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="../search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<div class="row-fluid">
 
-</head>
-<body>
-<div id="page">
+    <div class="row-fluid">
 
-  <header id="header">
-    <h1><a href="../index.html">Home</a></h1>
-  </header>
-
-<nav id="menu">
-  <a href="../index.html">Home</a>
-  <a href="../categories.html">Categories</a>
-  <a href="../tags.html">Most Visited</a>
-  <a href="../archives.html">Archives</a>
-
-</nav> <!-- /#nav -->
-  <section id="content">
- <h2 class="page_title">Articles dans la catégorie «Computer Vision»</h2>
- 
-    <article class="post">
-      <h2 class="title"><a href="../segmentation.html">Image Segmentation</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-02-19T08:00:00+01:00" pubdate="pubdate">Min 19 Pebruari 2017</time>
- par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
-        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Experiments with some traditional segmentation methods. Outline:</p>
-<ul>
-<li>DBSCAN</li>
-<li>K-mean</li>
-<li>Meanshift</li>
-<li>Graphcut</li>
-<li>Watershed</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Segmentation-by-DBSCAN">Segmentation by DBSCAN<a class="anchor-link" href="#Segmentation-by-DBSCAN">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input"><br />
-        <a class="more" href="../segmentation.html">Lire la suite...</a>
-      </section>
-    </article>
- 
-    <article class="post">
-      <h2 class="title"><a href="../object_tracking.html">Object Tracking</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-01-14T22:30:00+01:00" pubdate="pubdate">Sab 14 Januari 2017</time>
- par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
-Mots-clés: <a href="../tag/probability.html">Probability</a></p>        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Definition of Posterior Belief:</p>
-$$Bel(x_t) \equiv P(x_t | z_{1:t}, u_{1:t})$$<p>1st Assumption: Markovian Property</p>
-$$P(x_t | x_{t-1}, z_{1:t-1}, u_{1:t}) = P(x_t | x_{t-1}, u_t)$$<p>2nd Assumption: Sensor Independent</p>
-$$P(z_t | x_t, z_{1:t-1}, u_{1:t}) = P(z_t | x_t)$$<p>Graphical Model Illustration</p>
-<p><img src="images/model.png" width="350" /></p>
-<p>Recursive relationship between $Bel(x_t)$ and $Bel(x_{t-1})$</p>
-\begin{equation}
-\begin{split}
-Bel(x_t) & = P(x_t | z_{1:t}, u_{1:t}) \\
-  & = \eta P(z_t | x_t, z_{1:t-1}, u_{1:t})P(x_t | z_{1:t-1}, u_{1:t}) \\
-  & = \eta P(z_t | x_t)P(x_t | z_{1:t-1}, u_{1:t}) \\
-  & = \eta P(z_t | x_t)\int P(x_t | x_{t-1}, z_{1:t-1}, u_{1:t})P(x_{t-1} | z_{1:t-1}, u_{1:t})dx_{t-1} \\
-  & = \eta P(z_t | x_t)\int P(x_t | x_{t-1}, u_t)P(x_{t-1} | z_{1:t-1}, u_{1:t-1})dx_{t-1} \\
-  & = \eta P(z_t | x_t)\int P(x_t | x_{t-1}, u_t)Bel(x_{t-1})dx_{t-1}
-\end{split}
-\end{equation}
-</div><br />
-        <a class="more" href="../object_tracking.html">Lire la suite...</a>
-      </section>
-    </article>
- 
-    <article class="post">
-      <h2 class="title"><a href="../optical_flow.html">Optical Flow</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-01-14T22:14:00+01:00" pubdate="pubdate">Sab 14 Januari 2017</time>
- par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
-Mots-clés: <a href="../tag/linear-algebra.html">Linear Algebra</a>, <a href="../tag/analysis.html">Analysis</a></p>        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The <strong>1st assumption</strong> of Lucas Kanade is the brightness assumption, which assumes that the displaced pixel remains at the same brightness level. With u and v are the displacements of the pixel at $(x,y)$, the 1st assumption gives rise to</p>
-$$0 = I(x+u,y+v,t+1) - I(x,y,t) (1)$$<p>To estimate the amount of displacement, we can analyze the behavior of I(t) and I(t+1) at the vicinity of (x,y). The simplest way to do this is to exhautively search for the values of u and v that satisfy equation (1). This way is computationally expensive. A better method is to use the linear Taylor approximation of I(t+1) at (x,y). The <strong>2nd assumption</strong><br />
-        <a class="more" href="../optical_flow.html">Lire la suite...</a>
-      </section>
-    </article>
- 
-    <article class="post">
-      <h2 class="title"><a href="../corner_detection.html">Corner Detection</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-01-14T22:00:00+01:00" pubdate="pubdate">Sab 14 Januari 2017</time>
- par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
-Mots-clés: <a href="../tag/linear-algebra.html">Linear Algebra</a>, <a href="../tag/analysis.html">Analysis</a>, <a href="../tag/probability.html">Probability</a></p>        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Characterization-of-Harris-Corner">Characterization of Harris Corner<a class="anchor-link" href="#Characterization-of-Harris-Corner">¶</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>A good way to determine whether there is an edge at the vicinity of $(x,y)$ is to measure how much the intensity of the image changes around $(x,y)$. When we shift the image in horizontal direction and/or vertical direction, we expect the change in the intensity to be large at the location of an corner and vice versa. This motivates the definition of $E(x,y)$, which is a measure of how the intensity of an image patch around $(x,y)$ changes when we shift it on both directions:</p><br />
-        <a class="more" href="../corner_detection.html">Lire la suite...</a>
-      </section>
-    </article>
- 
-    <article class="post">
-      <h2 class="title"><a href="../projective_geometry.html">Projective Geometry</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-01-14T21:10:00+01:00" pubdate="pubdate">Sab 14 Januari 2017</time>
- par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
-Mots-clés: <a href="../tag/geometry.html">Geometry</a></p>        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Homography-(2D)">Homography (2D)<a class="anchor-link" href="#Homography-(2D)">¶</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Geometrically, given any two planes, a homography is the operation that projects the points from one plane (plane A) to other (plane B) via a projection point P, which does not lie on any of them. The projection is carried out by forming a line which connects the projection point P to any point on plane A and intersect plane B. This geometric description is not very useful for computation.</p><br />
-        <a class="more" href="../projective_geometry.html">Lire la suite...</a>
-      </section>
-    </article>
- 
-    <article class="post">
-      <h2 class="title"><a href="../camera_geometry.html">Calibration Matrix</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-01-13T22:00:00+01:00" pubdate="pubdate">Jum 13 Januari 2017</time>
- par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
-Mots-clés: <a href="../tag/linear-algebra.html">Linear Algebra</a>, <a href="../tag/geometry.html">Geometry</a></p>        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Derivation-of-Calibration-Matrix">Derivation of Calibration Matrix<a class="anchor-link" href="#Derivation-of-Calibration-Matrix">¶</a></h1><p><strong>This is a summary of the Lesson on Calibration Matrix of Udacity Computer Vision Course (<a href="https://www.udacity.com/course/introduction-to-computer-vision--ud810">https://www.udacity.com/course/introduction-to-computer-vision--ud810</a>)</strong>.</p>
-<p>Geometric relationship between world coordinate system and camera coordinate system gives rise to the following equation (intrinsic relation):</p>
-$$\vec{p'} = K ~^C\vec{p}$$<p>Geometric relationship between camera coordinate system and the coordinate system of image plane gives rise to the following equation (extrinsic relation):</p><br />
-        <a class="more" href="../camera_geometry.html">Lire la suite...</a>
-      </section>
-    </article>
- 
-    <article class="post">
-      <h2 class="title"><a href="../stereo_geometry.html">Stereo Geometry</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-01-13T20:00:00+01:00" pubdate="pubdate">Jum 13 Januari 2017</time>
- par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
-Mots-clés: <a href="../tag/geometry.html">Geometry</a></p>        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Geometry-of-stereo-matching">Geometry of stereo matching<a class="anchor-link" href="#Geometry-of-stereo-matching">¶</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img align="middle" src="images/stereo.png" width="250" /></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Assuming that the image planes of the two cameras are coplanar, the following formula relates the depth $Z$ with the disparity between $x_l$ and $x_r$, which are the projections of same point $P$ on the two image planes:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-$$Z = f\frac{B}{x_1-x_2}$$
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Stereo-maching-using-disparity">Stereo maching using disparity<a class="anchor-link" href="#Stereo-maching-using-disparity">¶</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input"><br />
-        <a class="more" href="../stereo_geometry.html">Lire la suite...</a>
-      </section>
-    </article>
- 
-    <article class="post">
-      <h2 class="title"><a href="../fourier_transform.html">Fourier Transform</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-01-12T22:00:00+01:00" pubdate="pubdate">Kam 12 Januari 2017</time>
- par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
-Mots-clés: <a href="../tag/functional-analysis.html">Functional Analysis</a></p>        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The intensity function is decomposed into the weighted sum of periodic exponentials:</p>
-$$f[m,n]=\frac{1}{\sqrt{MN}}\sum_{l=0}^{N-1}\sum_{k=0}^{M-1}F[k,l]
-e^{j2\pi(\frac{mk}{M}+\frac{nl}{N})}$$<p>where</p>
-$$F[k,l]=\frac{1}{\sqrt{MN}}\sum_{n=0}^{N-1}\sum_{m=0}^{M-1}f[m,n]
-e^{-j2\pi(\frac{mk}{M}+\frac{nl}{N})}$$
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Anti-aliasing">Anti-aliasing<a class="anchor-link" href="#Anti-aliasing">¶</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Anti-aliasing occurs when the sampling rate is too low allowing the bands to overlap and distort the characteristic of the original image. This can be alleviated by removing the high frequency components using some sorts of low pass filter (blurring).</p><br />
-        <a class="more" href="../fourier_transform.html">Lire la suite...</a>
-      </section>
-    </article>
- 
-    <article class="post">
-      <h2 class="title"><a href="../hough_transform.html">Hough Transform</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-01-12T21:00:00+01:00" pubdate="pubdate">Kam 12 Januari 2017</time>
- par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
-Mots-clés: <a href="../tag/trigonometry.html">Trigonometry</a></p>        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The basic idea of Hough transform is to map a candidate object of interest in the original coordinate system of the image to a point in another coordinate system (may be the same as the image system). The result of this mapping is that the problem of finding the most likely objects in the image system becomes the problem of finding areas of densest points in the other coordinate system, which is often an easier problem. The most likely objects can then be reconstructed by carrying out the reverse mapping.</p><br />
-        <a class="more" href="../hough_transform.html">Lire la suite...</a>
-      </section>
-    </article>
- 
-    <article class="post">
-      <h2 class="title"><a href="../convolution.html">Convolution Operation</a></h2>
-        <details class="meta">
-          Publié le <time datetime="2017-01-12T20:00:00+01:00" pubdate="pubdate">Kam 12 Januari 2017</time>
- par Andy Huynh dans «<a href="../category/computer-vision.html">Computer Vision</a>».  
-Mots-clés: <a href="../tag/linear-algebra.html">Linear Algebra</a></p>        </details> 
-      <section class="post_content">
-        
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Convolution is the same mathematical operation encountered in three different contexts of image processing: Gaussian noise removal, template matching and edge detection. Convolution is defined as</p>
-$$G[i,j] = \sum_{u=-k}^k\sum_{v=-k}^k H[u,v]F[i-u,j-v]$$<p>Flipping the signs of $u$ and $v$, we have the formula for correlation:</p>
-$$G[i,j] = \sum_{u=-k}^k\sum_{v=-k}^k H[u,v]F[i+u,j+v]$$
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Gaussian-noise-removal">Gaussian noise removal<a class="anchor-link" href="#Gaussian-noise-removal">¶</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The expected value of a Gaussian distribution of mean 0 is 0. Therefore, if the nearby pixels have similar values and the noise is Gaussian, their average would cancel out the noise.</p><br />
-        <a class="more" href="../convolution.html">Lire la suite...</a>
-      </section>
-    </article>
-  </section> <!-- /#content -->
-
-<aside id="sidebar">
-
-  <div class="widget" id="categories">
-    <h2>Categories</h2>
-    <ul>
-      <li class="active"><a href="../category/computer-vision.html">Computer Vision</a></li>
-      <li ><a href="../category/practical-ml.html">Practical ML</a></li>
-      <li ><a href="../category/theoretical-ml.html">Theoretical ML</a></li>
-    </ul>
-  </div>
-
-  
-
-    <div class="widget" id="social">
-      <h2>Social</h2>
-      <ul>
-        <li><a href="https://github.com/experiencor">github</a></li>
-        <li><a href="https://twitter.com/experiencor">twitter</a></li>
-       </ul>
+        <div class="span4">
+            <header>
+            <h1 id="my-projects">My Projects</h1>
+            <ul class="list-all-articles">
+                <li>
+                <a href="https://github.com/experiencor/self-driving-toy-car" title="Self Driving Toy Car">Self Driving Toy Car</a> <span class="proj_desc">A lane follower using a toy RC car and end to end learning.</span>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="https://github.com/experiencor/basic-yolo-keras" title="Object Detection">Object Detection</a> <span class="proj_desc">A clean implementation of YOLOv2 for object detection using keras.</span>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="https://github.com/experiencor/image-to-3d-bbox" title="3D Box Regression">3D Box Regression</a> <span class="proj_desc">A deep network to predict 3D bouding box of car in 2D image.</span>
+                </li>
+            </ul>
+        </div>
     </div>
 
-</aside>
-
-  <footer id="footer">
-    <p>Propulsé par <a href="http://docs.notmyidea.org/alexis/pelican/index.html">Pelican</a>.</p>
-  </footer>
-</div> <!-- /#page -->
-<script id="dsq-count-scr" src="//andyhuynh-1.disqus.com/count.js" async></script>
-</body>
+    <div class="row-fluid">
+        <div class="span12">
+            <header>
+            <h1 id="recent-posts">Recent Posts <a id="allposts" href="../archives.html">all posts</a></h1>
+            </header>
+            <ul class="list-all-articles">
+                <li>
+                <a href="../segmentation.html">Image Segmentation  </a> 
+                <time pubdate="pubdate" datetime="2017-02-19T08:00:00+01:00">Min 19 Pebruari 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="../object_tracking.html">Object Tracking  </a> 
+                <time pubdate="pubdate" datetime="2017-01-14T22:30:00+01:00">Sab 14 Januari 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="../optical_flow.html">Optical Flow  </a> 
+                <time pubdate="pubdate" datetime="2017-01-14T22:14:00+01:00">Sab 14 Januari 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="../corner_detection.html">Corner Detection  </a> 
+                <time pubdate="pubdate" datetime="2017-01-14T22:00:00+01:00">Sab 14 Januari 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="../projective_geometry.html">Projective Geometry  </a> 
+                <time pubdate="pubdate" datetime="2017-01-14T21:10:00+01:00">Sab 14 Januari 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="../camera_geometry.html">Calibration Matrix  </a> 
+                <time pubdate="pubdate" datetime="2017-01-13T22:00:00+01:00">Jum 13 Januari 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="../stereo_geometry.html">Stereo Geometry  </a> 
+                <time pubdate="pubdate" datetime="2017-01-13T20:00:00+01:00">Jum 13 Januari 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="../fourier_transform.html">Fourier Transform  </a> 
+                <time pubdate="pubdate" datetime="2017-01-12T22:00:00+01:00">Kam 12 Januari 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="../hough_transform.html">Hough Transform  </a> 
+                <time pubdate="pubdate" datetime="2017-01-12T21:00:00+01:00">Kam 12 Januari 2017</time>
+                </li>
+            </ul>
+            <ul class="list-all-articles">
+                <li>
+                <a href="../convolution.html">Convolution Operation  </a> 
+                <time pubdate="pubdate" datetime="2017-01-12T20:00:00+01:00">Kam 12 Januari 2017</time>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+    </body>
 </html>
