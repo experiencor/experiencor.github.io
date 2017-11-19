@@ -32,14 +32,17 @@
 
 <script type="text/javascript">
   const cat = document.getElementById('cat');
-
+  const resultElement = document.getElementById('result');
   const canvas = document.getElementById('canvas');
+
   context = canvas.getContext('2d');
   width  = canvas.width;
   height = canvas.height;
 
   const math = new dl.NDArrayMathGPU();
   const mobileNet = new mobilenet.MobileNet(math);  
+
+  resultElement.innerText = 'Downloading weights ...';
   mobileNet.load().then(loadImage);
 
   function loadImage() {
@@ -48,7 +51,7 @@
   }
 
   cat.onload = async () => {
-    const resultElement = document.getElementById('result');
+    
 
     resultElement.innerText = 'Predicting...';
     const pixels = dl.Array3D.fromPixels(cat);
