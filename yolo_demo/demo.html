@@ -23,7 +23,10 @@
 <div id="result">Status</div>
 <br />
 
-<input type="text" id="url" oninput="loadImage()" size="68" placeholder="paste the url of a raccoon image here to detect ..">
+<h3> Paste some random raccoon image url below to detect! </h3>
+<input type="text" id="url" oninput="loadImage()" size="68" \
+       placeholder="paste the url of a raccoon image here to detect .." \
+       value="https://www.almanac.com/sites/default/files/image_nodes/raccoon-pest-removal-garden.jpg"> 
 
 <script type="text/javascript">
   const image = document.getElementById('image');
@@ -40,9 +43,18 @@
   resultElement.innerText = 'Downloading weights ...';
   mobileNet.load().then(loadImage);
 
+  image.onerror = function() {
+    resultElement.innerText = 'Error loading image ...';
+  };
+
   function loadImage() {
+    resultElement.innerText = 'Loading image ...';
     input = document.getElementById('url');
+
     image.src = 'https://cors-anywhere.herokuapp.com/'+input.value;
+
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.beginPath();
   }
 
   image.onload = async () => {
@@ -58,9 +70,6 @@
     const boxes = await mobileNet.interpretNetout(result);
     var t1 = performance.now();
     const postProcessingTime = t1 - t0
-
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.beginPath();
 
     for (i = 0; i < boxes.length; i++) {
       box = boxes[i];
