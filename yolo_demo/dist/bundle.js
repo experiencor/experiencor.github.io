@@ -41,10 +41,10 @@ var mobilenet_utils_1 = require("./mobilenet_utils");
 var MobileNet = (function () {
     function MobileNet(math) {
         this.math = math;
-        this.preprocessOffset = deeplearn_1.Array1D.new([103.939, 116.779, 123.68]);
         this.HALF_TWO_FIVE_FIVE = deeplearn_1.Scalar.new(255.0 / 2);
         this.ONE = deeplearn_1.Scalar.ONE;
         this.THRESHOLD = 0.3;
+        this.THRESHOLD_SCALAR = deeplearn_1.Scalar.new(this.THRESHOLD);
         this.ANCHORS = [0.57273, 0.677385, 1.87446, 2.06253, 3.33843, 5.47434, 7.88282, 3.52778, 9.77052, 9.16828];
         deeplearn_1.initializeGPU(this.math.getGPGPUContext(), this.math.getTextureManager());
     }
@@ -54,7 +54,7 @@ var MobileNet = (function () {
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
-                        checkpointLoader = new deeplearn_1.CheckpointLoader('https://raw.githubusercontent.com/experiencor/model-zoo/master/mobilenet/');
+                        checkpointLoader = new deeplearn_1.CheckpointLoader('weights/');
                         _a = this;
                         return [4, checkpointLoader.getAllVariables()];
                     case 1:
@@ -71,33 +71,33 @@ var MobileNet = (function () {
             return __generator(this, function (_a) {
                 netout = this.math.scope(function (keep) {
                     var preprocessedInput = _this.math.subtract(_this.math.arrayDividedByScalar(input, _this.HALF_TWO_FIVE_FIVE), _this.ONE);
-                    var x1 = _this._conv_block(preprocessedInput, [2, 2]);
-                    var x2 = _this._depthwise_conv_block(x1, [1, 1], 1);
-                    var x3 = _this._depthwise_conv_block(x2, [2, 2], 2);
-                    var x4 = _this._depthwise_conv_block(x3, [1, 1], 3);
-                    var x5 = _this._depthwise_conv_block(x4, [2, 2], 4);
-                    var x6 = _this._depthwise_conv_block(x5, [1, 1], 5);
-                    var x7 = _this._depthwise_conv_block(x6, [2, 2], 6);
-                    var x8 = _this._depthwise_conv_block(x7, [1, 1], 7);
-                    var x9 = _this._depthwise_conv_block(x8, [1, 1], 8);
-                    var x10 = _this._depthwise_conv_block(x9, [1, 1], 9);
-                    var x11 = _this._depthwise_conv_block(x10, [1, 1], 10);
-                    var x12 = _this._depthwise_conv_block(x11, [1, 1], 11);
-                    var x13 = _this._depthwise_conv_block(x12, [2, 2], 12);
-                    var x14 = _this._depthwise_conv_block(x13, [1, 1], 13);
+                    var x1 = _this.convBlock(preprocessedInput, [2, 2]);
+                    var x2 = _this.depthwiseConvBlock(x1, [1, 1], 1);
+                    var x3 = _this.depthwiseConvBlock(x2, [2, 2], 2);
+                    var x4 = _this.depthwiseConvBlock(x3, [1, 1], 3);
+                    var x5 = _this.depthwiseConvBlock(x4, [2, 2], 4);
+                    var x6 = _this.depthwiseConvBlock(x5, [1, 1], 5);
+                    var x7 = _this.depthwiseConvBlock(x6, [2, 2], 6);
+                    var x8 = _this.depthwiseConvBlock(x7, [1, 1], 7);
+                    var x9 = _this.depthwiseConvBlock(x8, [1, 1], 8);
+                    var x10 = _this.depthwiseConvBlock(x9, [1, 1], 9);
+                    var x11 = _this.depthwiseConvBlock(x10, [1, 1], 10);
+                    var x12 = _this.depthwiseConvBlock(x11, [1, 1], 11);
+                    var x13 = _this.depthwiseConvBlock(x12, [2, 2], 12);
+                    var x14 = _this.depthwiseConvBlock(x13, [1, 1], 13);
                     var x15 = _this.math.conv2d(x14, _this.variables['conv_23/kernel'], _this.variables['conv_23/bias'], [1, 1], 'same');
                     return x15.as4D(13, 13, 5, 6);
                 });
-                return [2, { netout: netout }];
+                return [2, netout];
             });
         });
     };
-    MobileNet.prototype._conv_block = function (inputs, strides) {
+    MobileNet.prototype.convBlock = function (inputs, strides) {
         var x1 = this.math.conv2d(inputs, this.variables['conv1/kernel'], null, strides, 'same');
         var x2 = this.math.batchNormalization3D(x1, this.variables['conv1_bn/moving_mean'], this.variables['conv1_bn/moving_variance'], .001, this.variables['conv1_bn/gamma'], this.variables['conv1_bn/beta']);
         return this.math.clip(x2, 0, 6);
     };
-    MobileNet.prototype._depthwise_conv_block = function (inputs, strides, blockID) {
+    MobileNet.prototype.depthwiseConvBlock = function (inputs, strides, blockID) {
         var x1 = this.math.depthwiseConv2D(inputs, this.variables['conv_dw_' + blockID + '/depthwise_kernel'], strides, 'same');
         var x2 = this.math.batchNormalization3D(x1, this.variables['conv_dw_' + blockID + '_bn/moving_mean'], this.variables['conv_dw_' + blockID + '_bn/moving_variance'], .001, this.variables['conv_dw_' + blockID + '_bn/gamma'], this.variables['conv_dw_' + blockID + '_bn/beta']);
         var x3 = this.math.clip(x2, 0, 6);
@@ -105,77 +105,77 @@ var MobileNet = (function () {
         var x5 = this.math.batchNormalization3D(x4, this.variables['conv_pw_' + blockID + '_bn/moving_mean'], this.variables['conv_pw_' + blockID + '_bn/moving_variance'], .001, this.variables['conv_pw_' + blockID + '_bn/gamma'], this.variables['conv_pw_' + blockID + '_bn/beta']);
         return this.math.clip(x5, 0, 6);
     };
-    MobileNet.prototype.interpret_netout = function (netout) {
-        var _this = this;
-        var _a = netout.shape, GRID_H = _a[0], GRID_W = _a[1], BOX = _a[2], CLASS = _a[3];
-        var values = netout.getValues();
-        var boxes = new Array();
-        CLASS = CLASS - 5;
-        for (var row = 0; row < GRID_H; row++) {
-            for (var col = 0; col < GRID_W; col++) {
-                for (var box = 0; box < BOX; box++) {
-                    var l_bound = netout.locToIndex([row, col, box, 0]);
-                    var confidence = this.sigmoid(values[l_bound + 4]);
-                    var classes = values.slice(l_bound + 5, l_bound + 5 + CLASS);
-                    classes = this.sofmax(classes).map(function (x) { return (x * confidence); }).map(function (x) { return x > _this.THRESHOLD ? x : 0; });
-                    if (classes.reduce(function (a, b) { return a + b; }, 0) > 0) {
-                        var x = values[l_bound];
-                        var y = values[l_bound + 1];
-                        var w = values[l_bound + 2];
-                        var h = values[l_bound + 3];
+    MobileNet.prototype.interpretNetout = function (netout) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a, GRID_H, GRID_W, BOX, CLASS, boxes, confidence, classes, mask, objectLikelihood, objectLikelihoodValues, i, _b, row, col, box, conf, probs, xywh, x, y, w, h, _loop_1, indices, cls, likelyBoxes, _i, boxes_1, box_1;
+            return __generator(this, function (_c) {
+                _a = netout.shape, GRID_H = _a[0], GRID_W = _a[1], BOX = _a[2], CLASS = _a[3];
+                boxes = [];
+                CLASS = CLASS - 5;
+                confidence = this.math.sigmoid(this.math.slice4D(netout, [0, 0, 0, 4], [GRID_H, GRID_W, BOX, 1]));
+                classes = this.math.softmax(this.math.slice4D(netout, [0, 0, 0, 5], [GRID_H, GRID_W, BOX, CLASS]));
+                classes = this.math.multiply(classes, confidence);
+                mask = this.math.step(this.math.relu(this.math.subtract(classes, this.THRESHOLD_SCALAR)));
+                classes = this.math.multiply(classes, mask);
+                objectLikelihood = this.math.sum(classes, 3);
+                objectLikelihoodValues = objectLikelihood.getValues();
+                for (i = 0; i < objectLikelihoodValues.length; i++) {
+                    if (objectLikelihoodValues[i] > 0) {
+                        _b = objectLikelihood.indexToLoc(i), row = _b[0], col = _b[1], box = _b[2];
+                        conf = confidence.get(row, col, box, 0);
+                        probs = this.math.slice4D(classes, [row, col, box, 0], [1, 1, 1, CLASS]).getValues();
+                        xywh = this.math.slice4D(netout, [row, col, box, 0], [1, 1, 1, 4]).getValues();
+                        x = xywh[0];
+                        y = xywh[1];
+                        w = xywh[2];
+                        h = xywh[3];
                         x = (col + this.sigmoid(x)) / GRID_W;
                         y = (row + this.sigmoid(y)) / GRID_H;
                         w = this.ANCHORS[2 * box + 0] * Math.exp(w) / GRID_W;
                         h = this.ANCHORS[2 * box + 1] * Math.exp(h) / GRID_H;
-                        boxes.push(new mobilenet_utils_1.BoundingBox(x, y, w, h, confidence, classes));
+                        boxes.push(new mobilenet_utils_1.BoundingBox(x, y, w, h, conf, probs));
                     }
                 }
-            }
-        }
-        var _loop_1 = function () {
-            var all_probs = boxes.map(function (box) { return box.probs[cls]; });
-            indices = new Array(all_probs.length);
-            for (var i = 0; i < all_probs.length; ++i)
-                indices[i] = i;
-            indices.sort(function (a, b) { return all_probs[a] > all_probs[b] ? 1 : 0; });
-            for (var i = 0; i < all_probs.length; i++) {
-                var index_i = indices[i];
-                if (boxes[index_i].probs[cls] == 0) {
-                    continue;
-                }
-                else {
-                    for (var j = i + 1; j < all_probs.length; j++) {
-                        var index_j = indices[j];
-                        if (boxes[index_i].iou(boxes[index_j]) > 0.4) {
-                            boxes[index_j].probs[cls] = 0;
+                _loop_1 = function () {
+                    var all_probs = boxes.map(function (box) { return box.probs[cls]; });
+                    indices = new Array(all_probs.length);
+                    for (var i = 0; i < all_probs.length; ++i) {
+                        indices[i] = i;
+                    }
+                    indices.sort(function (a, b) { return all_probs[a] > all_probs[b] ? 1 : 0; });
+                    for (var i = 0; i < all_probs.length; i++) {
+                        var index_i = indices[i];
+                        if (boxes[index_i].probs[cls] === 0) {
+                            continue;
+                        }
+                        else {
+                            for (var j = i + 1; j < all_probs.length; j++) {
+                                var index_j = indices[j];
+                                if (boxes[index_i].iou(boxes[index_j]) > 0.4) {
+                                    boxes[index_j].probs[cls] = 0;
+                                }
+                            }
                         }
                     }
+                };
+                for (cls = 0; cls < CLASS; cls++) {
+                    _loop_1();
                 }
-            }
-        };
-        var indices;
-        for (var cls = 0; cls < CLASS; cls++) {
-            _loop_1();
-        }
-        var likelyBoxes = [];
-        for (var _i = 0, boxes_1 = boxes; _i < boxes_1.length; _i++) {
-            var box_1 = boxes_1[_i];
-            if (box_1.getMaxProb() > this.THRESHOLD) {
-                likelyBoxes.push(box_1);
-            }
-        }
-        return likelyBoxes;
+                likelyBoxes = [];
+                for (_i = 0, boxes_1 = boxes; _i < boxes_1.length; _i++) {
+                    box_1 = boxes_1[_i];
+                    if (box_1.getMaxProb() > this.THRESHOLD) {
+                        likelyBoxes.push(box_1);
+                    }
+                }
+                return [2, likelyBoxes];
+            });
+        });
     };
     MobileNet.prototype.sigmoid = function (x) {
         return 1. / (1. + Math.exp(-x));
     };
-    MobileNet.prototype.sofmax = function (x) {
-        var expX = x.map(Math.exp);
-        var sumX = expX.reduce(function (a, b) { return (a + b); });
-        return expX.map(function (x) { return (x / sumX); });
-    };
     MobileNet.prototype.dispose = function () {
-        this.preprocessOffset.dispose();
         for (var varName in this.variables) {
             this.variables[varName].dispose();
         }

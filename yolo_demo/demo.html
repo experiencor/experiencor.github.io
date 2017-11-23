@@ -1,7 +1,7 @@
 <script src="dist/bundle.js"></script>
 
 <style>
-  #cat {
+  #image {
     position: relative;
     top: 0px;
     left: 0px;   
@@ -17,21 +17,16 @@
 <script src="https://unpkg.com/deeplearn"></script>
 
 
-<img id="cat" height="416" width="416" crossorigin="anonymous"></img>
+<img id="image" height="416" width="416" crossorigin="anonymous"></img>
 <canvas id="canvas" height="416" width="416"></canvas>
 <br />
 <div id="result">Status</div>
 <br />
-<select id="image" oninput="loadImage()">
-  <option value="raccoon1.jpg">raccoon1</option>
-  <option value="raccoon2.jpg">raccoon2</option>
-  <option value="raccoon3.jpg">raccoon3</option>
-  <option value="raccoon4.jpg">raccoon4</option>
-  <option value="raccoon5.jpg">raccoon5</option>
-</select>
+
+<input type="text" id="url" oninput="loadImage()" size="68" placeholder="paste the url of dog image here to detect ..">
 
 <script type="text/javascript">
-  const cat = document.getElementById('cat');
+  const image = document.getElementById('image');
   const resultElement = document.getElementById('result');
   const canvas = document.getElementById('canvas');
 
@@ -46,15 +41,13 @@
   mobileNet.load().then(loadImage);
 
   function loadImage() {
-    input = document.getElementById('image');
-    cat.src = input.value;
+    input = document.getElementById('url');
+    image.src = 'https://cors-anywhere.herokuapp.com/'+input.value;
   }
 
-  cat.onload = async () => {
-    
-
+  image.onload = async () => {
     resultElement.innerText = 'Predicting...';
-    const pixels = dl.Array3D.fromPixels(cat);
+    const pixels = dl.Array3D.fromPixels(image);
 
     var t0 = performance.now();
     const result = await mobileNet.predict(pixels);
@@ -62,12 +55,12 @@
     const inferenceTime = t1 - t0
 
     var t0 = performance.now();
-    const boxes = await mobileNet.interpret_netout(result.netout);
+    const boxes = await mobileNet.interpretNetout(result);
     var t1 = performance.now();
     const postProcessingTime = t1 - t0
 
     context.clearRect(0, 0, canvas.width, canvas.height);
-    context.beginPath()
+    context.beginPath();
 
     for (i = 0; i < boxes.length; i++) {
       box = boxes[i];
@@ -90,7 +83,6 @@
       context.font = font;
       context.textBaseline = 'top';
       context.fillStyle = box.getColor();
-      
       const textWidth = context.measureText(label).width;
       context.fillRect(x-2, y-24, textWidth, parseInt(font, 10));
       
@@ -99,28 +91,6 @@
     }
 
     resultElement.innerText = 'Complete!, Inference time: ' +  Math.round(inferenceTime) + 'ms' +
-                              ', post precessing time: ' + Math.round(postProcessingTime) + 'ms'; 
+                              ', Post precessing time: ' + Math.round(postProcessingTime) + 'ms'; 
   }
-</script>
-
-<script>
-  // When the user clicks on the button,  toggle between hiding and showing the dropdown content
-  function toggleList() {
-      document.getElementById("myDropdown").classList.toggle("show");
-  }
-
-  // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-}
 </script>
